@@ -1,6 +1,5 @@
 import { Route } from '../../Core/Models/route.models';
-import { Login } from '../Ui/Pages/Login/Login';
-import { Dashboard } from '../Ui/Pages/Dashboard/Dashboard';
+import { Login, Dashboard } from './lazy.routes';
 
  
 export const routes: Route[] = [
