@@ -1,0 +1,155 @@
+@import "../../Styles/_common.scss";
+
+.content-img {
+  width: 50%;
+}
+
+.size-doctor {
+  position: absolute;
+  width: 656px;
+  height: 100%;
+  left: 30px;
+}
+.circle {
+  background-color: $Blue-primary;
+  position: absolute;
+  width: 64%;
+  height: 65%;
+  border-top-right-radius: 650px;
+  border-top-left-radius: 500px;
+  top: 290px;
+  left: -200px;
+}
+.circle-second {
+  background-color: $Blue-primary;
+  box-shadow: 0px 4px 10px rgba(0.7, 0.7, 0.7, 0.4);
+  width: 820px;
+  height: 436px;
+  border-top-right-radius: 500px;
+  border-top-left-radius: 500px;
+  position: absolute;
+  top: 371px;
+  left: -220px;
+}
+
+.content-home {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90vh;
+}
+
+.content-login {
+  position: absolute;
+  left: 818px;
+  top: 99px;
+  display: flex;
+  flex-direction: column;
+}
+.content-login-title {
+  position: absolute;
+  top: 103px;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  left: 100px;
+}
+
+.content-inputs {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 350px;
+  left: 100px;
+  width: 300px;
+
+  &:focus {
+    outline: none;
+    border-bottom: 0.1px solid $Blue-primary;
+  }
+}
+
+.subtitle {
+  width: 452px;
+  height: 96px;
+  font-size: 20px;
+  color: $Black-secondary;
+  font-weight: 400;
+  position: absolute;
+  top: 60px;
+}
+
+.title {
+  width: 190px;
+  height: 24px;
+  font-size: 30px;
+  color: $Black-primary;
+  font-weight: 700;
+}
+
+.input-name {
+  height: 44px;
+  width: 400px;
+  font-size: 16px;
+  border: 1px solid $Purple-primary;
+  border-radius: 3.5px;
+}
+.input-password {
+  position: relative;
+  height: 44px;
+  width: 400px;
+  font-size: 16px;
+  border: 1px solid $Purple-primary;
+  border-radius: 3.5px;
+  top: 33px;
+}
+
+.button-login {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 10px;
+  width: 406px;
+  height: 44px;
+  background: $Blue-primary;
+  border-radius: 8px;
+  color: $Background-white;
+  position: absolute;
+  top: 530px;
+  left: 100px;
+}
+.text-button {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 24px;
+}
+.text-login {
+  position: absolute;
+  width: 287.04px;
+  height: 24px;
+  left: 160.37px;
+  top: 584px;
+
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
+
+  color: #4151b9;
+}
+
+.img-password {
+  width: 20px;
+  border: 0px;
+  position: relative;
+  top: 1px;
+}
