@@ -90,20 +90,63 @@
 }
 
 .input-name {
+  border: 0.1px solid $Black-primary;
   height: 44px;
-  width: 400px;
-  font-size: 16px;
-  border: 1px solid $Purple-primary;
+  width: 320px;
+  flex-direction: row;
   border-radius: 3.5px;
+  position: relative;
+  top: -23px;
+  padding: 2px 2.5rem;
+}
+
+.input-name:focus {
+  outline: none;
+  border: 0.1px solid $Blue-primary;
+}
+
+.input-name:focus + label {
+  transform: translateY(-25px);
+  transition: 0.5s;
+  font-size: 12px;
+  color: $Blue-primary;
+  font-weight: 400;
+  left: 14px;
+}
+.input-name:not(:placeholder-shown) + .placeholder-user {
+  transform: translateY(-25px);
+
+  font-size: 12px;
+  left: 14px;
 }
 .input-password {
-  position: relative;
+  border: 0.1px solid $Black-primary;
   height: 44px;
-  width: 400px;
-  font-size: 16px;
-  border: 1px solid $Purple-primary;
+  width: 320px;
+  flex-direction: row;
   border-radius: 3.5px;
-  top: 33px;
+  position: relative;
+  top: 23px;
+  text-align: left;
+  padding: 2px 2.5rem;
+}
+.input-password:focus + label {
+  transform: translateY(-25px);
+  font-size: 12px;
+  color: $Blue-primary;
+  font-weight: 400;
+  left: 14px;
+}
+
+.input-password:not(:placeholder-shown) + .placeholder-password {
+  transform: translateY(-25px);
+  font-size: 12px;
+  left: 14px;
+}
+
+.input-password:focus {
+  outline: none;
+  border: 0.1px solid $Blue-primary;
 }
 
 .button-login {
@@ -112,14 +155,20 @@
   justify-content: center;
   align-items: center;
   padding: 16px 10px;
-  width: 406px;
+  width: 413px;
   height: 44px;
   background: $Blue-primary;
   border-radius: 8px;
   color: $Background-white;
   position: absolute;
-  top: 530px;
+  top: 510px;
   left: 100px;
+  cursor: pointer;
+  border: none;
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
+  }
 }
 .text-button {
   font-family: "Montserrat", sans-serif;
@@ -133,8 +182,8 @@
   width: 287.04px;
   height: 24px;
   left: 160.37px;
-  top: 584px;
-
+  top: 564px;
+  cursor: pointer;
   font-family: "Verdana";
   font-style: normal;
   font-weight: 400;
@@ -147,9 +196,42 @@
   color: #4151b9;
 }
 
-.img-password {
-  width: 20px;
-  border: 0px;
-  position: relative;
-  top: 1px;
+.img-input-password {
+  bottom: -8px;
+  left: 14px;
+  position: absolute;
+  width: 14px;
+  height: 18px;
+}
+
+.img-input-user {
+  bottom: 90px;
+  left: 10px;
+  position: absolute;
+}
+
+label {
+  position: absolute;
+  background: white;
+  padding: 0 0.5rem;
+}
+
+.placeholder-password {
+  top: 84px;
+  left: 40px;
+  font-family: "Verdana";
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+}
+
+.placeholder-user {
+  top: -8px;
+  left: 40px;
+  font-family: "Verdana";
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
 }

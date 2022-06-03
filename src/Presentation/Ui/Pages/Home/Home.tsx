@@ -1,7 +1,7 @@
 import { Header } from "../../Components/Header/Header";
 import Doctor from "../../../Common/assets/pose_6.png";
-import User from "../../../Common/assets/Vector.png";
 import Password from "../../../Common/assets/Copia de Vector.png";
+import User from "../../../Common/assets/Vector.png";
 import "./Home.scss";
 export const Home = () => {
   return (
@@ -23,18 +23,29 @@ export const Home = () => {
             </h3>
           </div>
           <div className="content-inputs">
-            <input
-              type="text"
-              placeholder="Usuario"
-              className="input-name"
-              src={User}
-            />
+            <div className="conent-user-input">
+              <input
+                type="text"
+                className="input-name"
+                id="textUser"
+                placeholder=" "
+              />
+              <label htmlFor="textUser" className="placeholder-user">
+                Usuario
+              </label>
+              <img src={User} className="img-input-user" />
+            </div>
             <div className="conent-password-input">
               <input
                 type="password"
                 className="input-password"
-                placeholder="Contraseña"
+                id="textPassword"
+                placeholder=" "
               />
+              <label htmlFor="textPassword" className="placeholder-password">
+                Contraseña
+              </label>
+              <img src={Password} className="img-input-password" />
             </div>
           </div>
           <div className="content-login-button">
@@ -42,7 +53,7 @@ export const Home = () => {
               <h1 className="text-button">Iniciar sesión</h1>
             </button>
           </div>
-          <h1 className="text-login">¿has olvidado la contraseña?</h1>
+          <h1 className="text-login">¿Has olvidado la contraseña?</h1>
         </div>
       </div>
     </div>
