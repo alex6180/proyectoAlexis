@@ -1,19 +1,29 @@
-import { Route } from '../../Core/Models/route.models';
-import { Login, Dashboard } from './lazy.routes';
+import { Routes } from "../../Core/Models/route.models";
+import CreateUser from "../Ui/Pages/Create-user/Create-user/CreateUser";
+import { CreateUserInit } from "../Ui/Pages/Create-user/Create-user-init/Create-user-init";
+import { CretateUserStepOne } from "../Ui/Pages/Create-user/Create-user-step-one/cretate-user-step-one";
 
- 
-export const routes: Route[] = [
+import { Login } from "../Ui/Pages/Login/Login";
+
+export const routes: Routes[] = [
   {
-    to: '/login',
-    path: 'login',
-    Component: Login,
-    name: 'login'
+    to: "/create-user",
+    path: "cretate-user",
+    Component: CreateUser,
   },
   {
-    to: '/dashboard',
-    path: 'dashboard',
-    Component: Dashboard,
-    name: 'dashboard'
-  }
-
-]
+    to: "/create-user-1",
+    path: "cretate-user-init",
+    Component: CreateUserInit,
+  },
+  {
+    to: "/create-user-2",
+    path: "cretate-user-step-one",
+    Component: CretateUserStepOne,
+  },
+  {
+    to: "/login",
+    path: "login",
+    Component: Login,
+  },
+];

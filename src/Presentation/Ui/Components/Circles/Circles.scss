@@ -1,0 +1,22 @@
+@import "../../Styles/_common.scss";
+.circle {
+  background-color: $Blue-primary;
+  border-top-left-radius: 560px;
+  border-top-right-radius: 590px;
+  position: absolute;
+  height: 57%;
+  left: -15%;
+  top: 43%;
+  width: 59%;
+}
+.circle-second {
+  background-color: $Blue-primary;
+  border-top-right-radius: 500px;
+  box-shadow: 0px 4px 10px rgba(0.7, 0.7, 0.7, 0.4);
+  border-top-left-radius: 500px;
+  height: 49%;
+  position: absolute;
+  left: -9%;
+  top: 51%;
+  width: 47%;
+}

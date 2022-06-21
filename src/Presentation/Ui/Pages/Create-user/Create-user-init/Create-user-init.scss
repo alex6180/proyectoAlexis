@@ -1,0 +1,84 @@
+@import "../../../Styles/_common.scss";
+
+.size-doctor-create-user-1 {
+  background: transparent;
+  height: 90%;
+  position: absolute;
+  top: 10%;
+  width: 666px;
+}
+
+.size-arrow-create-user-1 {
+  left: -60%;
+  height: 23.67px;
+  position: absolute;
+  top: 28%;
+  width: 23.67px;
+}
+
+.text-create-user-1 {
+  color: $Blue-primary;
+  cursor: pointer;
+  left: 10%;
+  position: absolute;
+  top: 14%;
+}
+
+.text-button-create-user-1 {
+  line-height: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 100;
+}
+.content-texts-create-user-1 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.content-create-user-3 {
+  background: whitesmoke;
+  left: -1%;
+  height: 88%;
+  position: absolute;
+  top: 10%;
+  width: 56%;
+}
+.title-create-user-1 {
+  color: $Black-primary;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 32px;
+  left: 855px;
+  position: absolute;
+  top: 300px;
+}
+
+.subtitle-create-user-1 {
+  color: $Black-secondary;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 32px;
+  left: 328px;
+  position: relative;
+  top: 370px;
+  width: 392px;
+}
+
+.content-button-create-user-1 {
+  left: 52%;
+  position: absolute;
+  top: 10px;
+}
+
+@media (min-width: 1700px) {
+  .content-button-create-user-1 {
+    margin-left: -8.5%;
+    margin-top: -50%;
+  }
+  .title-create-user-1 {
+    left: 57%;
+  }
+}

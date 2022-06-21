@@ -1,9 +1,8 @@
-import { LazyExoticComponent } from 'react';
+import { LazyExoticComponent } from "react";
 import { JSXComponent } from "../Types/Component.types";
 
-export interface Route {
+export interface Routes {
   to: string;
   path: string;
-  Component: LazyExoticComponent<JSXComponent> | JSXComponent
-  name: string;
+  Component: LazyExoticComponent<JSXComponent> | JSXComponent;
 }

@@ -1,0 +1,74 @@
+@import "../../../Styles/_common.scss";
+.size-doctor-create-user {
+  height: 98%;
+  left: 2.6%;
+  position: absolute;
+  top: 1%;
+  width: 54%;
+}
+
+.texts-button-create-user {
+  left: 59%;
+  position: absolute;
+  top: 38%;
+}
+
+.content-button-create-user {
+  left: 1034px;
+  position: absolute;
+  top: 114px;
+}
+
+.subtitle-create-user-2 {
+  color: $Black-secondary;
+  font-family: "Verdana";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  flex: none;
+  flex-grow: 0;
+  height: 8px;
+  line-height: 24px;
+  left: 2px;
+  order: 0;
+  position: absolute;
+  top: 170px;
+  width: 553px;
+}
+
+.subtitle-create-user {
+  color: $Black-tertiary;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 86px;
+  line-height: 117px;
+  letter-spacing: -0.3px;
+  left: -4px;
+  height: 117px;
+  position: absolute;
+  top: -34px;
+  width: 583px;
+}
+
+.title-create-user {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 64px;
+  font-weight: 100;
+  position: absolute;
+  top: -140px;
+}
+
+@media (max-width: 1700px) {
+  .content-button-create-user {
+    margin-left: -278px;
+    top: -5px;
+  }
+  .subtitle-create-user-2 {
+    top: 128px;
+  }
+  .subtitle-create-user {
+    top: -58px;
+  }
+}

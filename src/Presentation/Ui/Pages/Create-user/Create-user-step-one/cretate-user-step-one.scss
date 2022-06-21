@@ -1,0 +1,208 @@
+@import "../../../Styles/_common.scss";
+
+.image-doctor-create-user-2 {
+  background: transparent;
+  position: absolute;
+  height: 72%;
+  left: 6%;
+  top: 28%;
+  width: 596px;
+}
+.content-create-user-4 {
+  background: whitesmoke;
+  position: absolute;
+  height: 140%;
+  left: -3%;
+  top: 10%;
+  width: 60%;
+}
+.calendar-icon-size {
+  color: $Black-tertiary;
+  height: 22px;
+  position: absolute;
+  right: 8%;
+  top: 46.2%;
+  width: 22px;
+}
+.button-create-user2:enabled {
+  align-items: center;
+  background: $Blue-primary;
+  border: none;
+  border-radius: 8px;
+  color: $Background-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 44px;
+  justify-content: center;
+  left: 100px;
+  padding: 16px 10px;
+  position: absolute;
+  top: 510px;
+  width: 402px;
+  &:hover {
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.button-create-user2:disabled {
+  align-items: center;
+  background: #75b2ff;
+  border: none;
+  border-radius: 8px;
+  color: $Background-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  height: 44px;
+  justify-content: center;
+  left: 100px;
+  padding: 16px 10px;
+  position: absolute;
+  top: 510px;
+  width: 402px;
+}
+
+.number-progress-bar-header-create-user-2 {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  font-family: "Verdana";
+  font-size: 16px;
+  font-weight: 400;
+  left: 88%;
+  letter-spacing: 0.15px;
+  top: 17%;
+}
+.bar {
+  background: #c4c4c4;
+  border-radius: 10px;
+  height: 16px;
+  left: 64%;
+  position: absolute;
+  top: 22%;
+  width: 410px;
+}
+
+.progress-bar {
+  animation: Aumentar 5s ease;
+  background: $Blue-primary;
+  border-radius: 10px;
+  height: 100%;
+  width: 50%;
+}
+
+@keyframes Aumentar {
+  0% {
+    width: 25%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.text-header-create-user-2 {
+  color: $Black-primary;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  left: 64%;
+  line-height: 24px;
+  position: absolute;
+  top: 28%;
+}
+
+.second-text-header-create-user-2 {
+  color: $Black-secondary;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  left: 64%;
+  position: absolute;
+  width: 452px;
+  top: 36%;
+}
+
+.inputs-create-user-2 {
+  left: 58.5%;
+  position: absolute;
+  top: 55%;
+  width: 500px;
+}
+
+.input-create-user-2 {
+  border: 0.1px solid $Black-tertiary;
+  border-radius: 3.5px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  height: 45px;
+  left: 80px;
+  line-height: 24px;
+  margin-bottom: 25px;
+  padding: 0px 0px 0px 15px;
+  position: relative;
+  width: 384px;
+}
+
+input:focus {
+  border: 0.1px solid $Purple-primary;
+  outline: none;
+}
+
+select {
+  color: rgba(0, 0, 0, 0.5);
+  border: 0.1px solid $Black-tertiary;
+  border-radius: 3.5px;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  font-size: 16px;
+  height: 45px;
+  left: 80px;
+  line-height: 24px;
+  margin-bottom: 25px;
+  padding: 0px 10px 0px 10px;
+  width: 400px;
+}
+select:focus {
+  border: 0.1px solid $Purple-primary;
+  outline: none;
+}
+
+.content-button-create-user-2 {
+  left: -20px;
+  position: absolute;
+  top: 120px;
+}
+
+@media (min-width: 1600px) {
+  .content-button-create-user-1 {
+    left: 60%;
+    position: absolute;
+    top: 980px;
+  }
+  .inputs-create-user-2 {
+    left: 60%;
+    top: 460px;
+  }
+  .number-progress-bar-header-create-user-2 {
+    left: 82%;
+    top: 18%;
+    position: absolute;
+  }
+  .content-create-user-4 {
+    height: 120%;
+  }
+}

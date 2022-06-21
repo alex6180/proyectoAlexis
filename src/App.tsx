@@ -1,9 +1,9 @@
-import { Home } from "./Presentation/Ui/Pages/Home/Home";
+import { Navigation } from "./Presentation/Routes/Navigation";
 
 function App() {
   return (
     <>
-      <Home />
+      <Navigation />
     </>
   );
 }
