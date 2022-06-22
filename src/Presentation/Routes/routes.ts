@@ -7,7 +7,7 @@ import { Login } from "../Ui/Pages/Login/Login";
 
 export const routes: Routes[] = [
   {
-    to: "/create-user",
+    to: "/CreateUser",
     path: "cretate-user",
     Component: CreateUser,
   },
