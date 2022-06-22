@@ -4,9 +4,18 @@ import Doctor from "../../../../Common/assets/pose_7.png";
 import Arrow from "../../../../Common/assets/Vector1.png";
 
 import "./Create-user-init.scss";
-import { Button } from "../../../Components/Button/Button";
+
 import { Circles } from "../../../Components/Circles/Circles";
+import { useNavigate } from "react-router-dom";
 export const CreateUserInit = () => {
+  const navigate = useNavigate();
+  const buttonActionOne = () => {
+    navigate("/cretate-user");
+  };
+  const buttonActiontwo = () => {
+    navigate("/cretate-user-step-one");
+  };
+
   return (
     <div className="content-create-user-1">
       <Header />
@@ -15,7 +24,7 @@ export const CreateUserInit = () => {
       <div className="content-img-create-user-1">
         <img src={Doctor} className="size-doctor-create-user-1" />
       </div>
-      <div className="text-create-user-1">
+      <div className="text-create-user-1" onClick={buttonActionOne}>
         <img src={Arrow} className="size-arrow-create-user-1" />
         <h1 className="text-button-create-user-1"> Regresar </h1>
       </div>
@@ -27,7 +36,9 @@ export const CreateUserInit = () => {
           mano los datos personales de cada uno de ellos.{" "}
         </h1>
         <div className="content-button-create-user-1">
-          <Button title="!Empecemos¡" />
+          <button className="button-login" onClick={buttonActiontwo}>
+            ¡Empecemos!
+          </button>
         </div>
       </div>
     </div>

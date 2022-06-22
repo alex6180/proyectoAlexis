@@ -10,19 +10,23 @@ import "react-datepicker/dist/react-datepicker.css";
 import DatePicker from "react-datepicker";
 import es from "date-fns/locale/es";
 import { CONSTANTS } from "../../../../Common/Constans/Constans";
+import { useNavigate } from "react-router-dom";
 
 export const CretateUserStepOne = () => {
   const [Date, setDate] = useState<Date | null>(null);
   const onClickButton = () => {
     console.log("startDate");
   };
-
+  const navigate = useNavigate();
+  const buttonAction = () => {
+    navigate("/cretate-user-init");
+  };
   return (
     <div>
       <Header />
       <div className="content-create-user-4" />
 
-      <div className="text-create-user-1">
+      <div className="text-create-user-1" onClick={buttonAction}>
         <img src={Arrow} className="size-arrow-create-user-1" />
         <h1 className="text-button-create-user-1"> Regresar </h1>
       </div>

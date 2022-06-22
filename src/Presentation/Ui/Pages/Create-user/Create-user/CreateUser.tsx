@@ -2,8 +2,14 @@ import { Header } from "../../../Components/Header/Header";
 import Doctor from "../../../../Common/assets/pose_1.png";
 import "./Create-user.scss";
 import { Button } from "../../../Components/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 export const CreateUser = () => {
+  const navigate = useNavigate();
+  const buttonAction = () => {
+    navigate("/cretate-user-init");
+  };
+
   return (
     <div className="content-create-user">
       <Header />
@@ -19,7 +25,10 @@ export const CreateUser = () => {
         </h1>
       </div>
       <div className="content-button-create-user">
-        <Button title="Crear usuario" />
+        <button className="button-login" onClick={buttonAction}>
+          {" "}
+          Crear usuario{" "}
+        </button>
       </div>
     </div>
   );
