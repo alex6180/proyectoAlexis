@@ -7,19 +7,16 @@ import "./Login.scss";
 import { Circles } from "../../Components/Circles/Circles";
 import { useState } from "react";
 import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
-import { FormikErrors, useFormik } from "formik";
-
-interface FormValues {
-  usuario: string;
-  contraseña: string;
-}
+import { FormikErrors, replace, useFormik } from "formik";
+import { Button } from "../../Components/Button/Button";
 
 export const Login = () => {
   const [disabled, setDisabled] = useState(true);
   const ButtonDisabled = () => {
     if (!values.usuario) {
       setDisabled(true);
-    } else if (!values.contraseña) {
+    }
+    if (!values.contraseña) {
       setDisabled(true);
     } else {
       setDisabled(false);
@@ -27,7 +24,7 @@ export const Login = () => {
   };
   const navigate = useNavigate();
   const buttonAction = () => {
-    navigate("/cretate-user");
+    navigate("/cretate-user", { replace: true });
   };
 
   const { handleChange, values } = useFormik({
@@ -66,6 +63,7 @@ export const Login = () => {
                 name="usuario"
                 value={values.usuario}
                 onChange={handleChange}
+                autoComplete="none"
               />
               <label htmlFor="textUser" className="placeholder-user">
                 usuario
@@ -90,9 +88,9 @@ export const Login = () => {
           </div>
           <div className="content-button-login">
             <button
-              className="button-login"
-              disabled={disabled}
               onClick={buttonAction}
+              disabled={disabled}
+              className="button-login"
             >
               Iniciar sesion
             </button>

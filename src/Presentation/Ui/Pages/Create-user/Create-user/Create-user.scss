@@ -1,4 +1,5 @@
 @import "../../../Styles/_common.scss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
 .size-doctor-create-user {
   height: 98%;
   left: 2.6%;
@@ -8,7 +9,7 @@
 }
 
 .texts-button-create-user {
-  left: 59%;
+  left: 59.4%;
   position: absolute;
   top: 38%;
 }
@@ -40,8 +41,8 @@
   color: $Black-tertiary;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
-  font-weight: 600;
-  font-size: 86px;
+  font-weight: 700;
+  font-size: 84px;
   line-height: 117px;
   letter-spacing: -0.3px;
   left: -4px;
@@ -55,7 +56,7 @@
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-size: 64px;
-  font-weight: 100;
+  font-weight: 400;
   position: absolute;
   top: -140px;
 }

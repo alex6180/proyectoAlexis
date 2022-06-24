@@ -1,15 +1,15 @@
-import React from "react";
+import React, { ButtonHTMLAttributes, DOMAttributes } from "react";
 import "./Button.scss";
 interface title {
   title: string;
 }
 
-export const Button: React.FC<title> = ({ title }: title) => {
+export const Button = ({
+  ...props
+}: React.DOMAttributes<HTMLButtonElement>) => {
   return (
-    <div className="content-button">
-      <button className="button">
-        <h2 className="text-button"> {title} </h2>
-      </button>
+    <div>
+      <button>Iniciar sesion</button>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 @import "../../../Styles/_common.scss";
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
 .size-doctor-create-user-1 {
   background: transparent;
   height: 90%;
@@ -35,22 +35,22 @@
   display: flex;
   justify-content: center;
   position: relative;
-  left: 80px;
+  left: 8px;
 }
 
 .content-create-user-3 {
   background: whitesmoke;
   left: -1%;
-  height: 88%;
+  height: 90%;
   position: absolute;
   top: 10%;
-  width: 56%;
+  width: 50%;
 }
 .title-create-user-1 {
   color: $Black-primary;
   font-family: "Montserrat", sans-serif;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: Bold 700;
   line-height: 32px;
   left: 840px;
   position: absolute;
@@ -59,14 +59,14 @@
 
 .subtitle-create-user-1 {
   color: $Black-secondary;
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
+  font-family: "Verdana";
   font-weight: 400;
-  line-height: 32px;
-  left: 328px;
-  position: relative;
-  top: 370px;
-  width: 392px;
+  font-size: 18px;
+  position: absolute;
+  top: 380px;
+  left: 59%;
+  width: 342px;
+  height: 96px;
 }
 
 .content-button-create-user-1 {

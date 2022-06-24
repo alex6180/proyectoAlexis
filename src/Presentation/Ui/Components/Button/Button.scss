@@ -1,6 +1,6 @@
 @import "../../Styles/_common.scss";
 
-.button {
+button {
   align-items: center;
   background: $Blue-primary;
   border: none;
@@ -21,7 +21,7 @@
     transform: translateY(-2px);
   }
 }
-.text-button {
+h2 {
   width: 138px;
   height: 24px;
   font-family: "Montserrat", sans-serif;

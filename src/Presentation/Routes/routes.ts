@@ -4,6 +4,7 @@ import { CreateUserInit } from "../Ui/Pages/Create-user/Create-user-init/Create-
 import { CretateUserStepOne } from "../Ui/Pages/Create-user/Create-user-step-one/cretate-user-step-one";
 
 import { Login } from "../Ui/Pages/Login/Login";
+import { HomeAdmin } from "../Ui/Pages/Home-admin/Home-admin";
 
 export const routes: Routes[] = [
   {
@@ -20,6 +21,11 @@ export const routes: Routes[] = [
     to: "/create-user-2",
     path: "cretate-user-step-one",
     Component: CretateUserStepOne,
+  },
+  {
+    to: "/Home-admin",
+    path: "Home-admin",
+    Component: HomeAdmin,
   },
   {
     to: "/login",

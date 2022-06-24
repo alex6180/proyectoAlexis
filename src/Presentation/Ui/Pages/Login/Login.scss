@@ -1,5 +1,5 @@
 @import "../../Styles/_common.scss";
-
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@100;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
 .content-img {
   width: 50%;
 }
@@ -213,6 +213,7 @@ label {
   }
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  font-weight: 600;
 }
 
 .button-login:disabled {
@@ -226,6 +227,7 @@ label {
   flex-direction: row;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+  font-weight: 600;
   height: 44px;
   justify-content: center;
   left: 100px;
