@@ -97,10 +97,6 @@ export const CretateUserStepOne = () => {
     }
   };
 
-  const handleClick = () => {
-    console.log(values);
-  };
-
   const handleButtonModal = () => {
     navigate("/Home-admin", { replace: true });
   };
