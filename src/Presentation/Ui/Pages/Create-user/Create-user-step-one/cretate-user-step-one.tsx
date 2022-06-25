@@ -22,14 +22,87 @@ export const CretateUserStepOne = () => {
       TipoSangre: "",
       EstadoCivil: "",
       EPS: "",
+      Departamento: "",
+      DirecciónResidencia: "",
+      CorreoElectrónico: "",
+      Celular: "",
+      TeléfonoFijo: "",
+      TeléfonoOficina: "",
+      Nombres1: "",
+      Apellidos1: "",
+      Parentesco: "",
+      TeléfonoContacto: "",
+      Rol: "",
+      Contraseña: "",
+      Profesion: "",
     },
     onSubmit: (values) => {
       console.log(values);
     },
   });
+  const [disabled, setDisabled] = useState(true);
+  const [disabledFormtwo, setDisabledFormtwo] = useState(true);
+  const [disabledFormThree, setDisabledFormThree] = useState(true);
+  const [disabledFormFour, setDisabledFormFour] = useState(true);
+
+  const ButtonDisabledFormOne = () => {
+    if (
+      (values.Apellidos,
+      values.EPS,
+      values.EstadoCivil,
+      values.FechaNacimiento,
+      values.Nombres,
+      values.NumeroDocumento,
+      values.Sexo,
+      values.TipoDocumento,
+      values.TipoSangre === "")
+    ) {
+      setDisabled(true);
+    } else {
+      setDisabled(false);
+    }
+  };
+  const ButtonDisabledFormTwo = () => {
+    if (
+      (values.Celular,
+      values.CorreoElectrónico,
+      values.Departamento,
+      values.DirecciónResidencia,
+      values.TeléfonoFijo,
+      values.TeléfonoOficina === "")
+    ) {
+      setDisabledFormtwo(true);
+    } else {
+      setDisabledFormtwo(false);
+    }
+  };
+  const ButtonDisabledFormThree = () => {
+    if (
+      (values.Apellidos1,
+      values.Nombres1,
+      values.Parentesco,
+      values.TeléfonoContacto === "")
+    ) {
+      setDisabledFormThree(true);
+    } else {
+      setDisabledFormThree(false);
+    }
+  };
+
+  const ButtonDisabledFormFour = () => {
+    if ((values.Contraseña, values.Profesion, values.Rol === "")) {
+      setDisabledFormFour(true);
+    } else {
+      setDisabledFormFour(false);
+    }
+  };
+
+  const handleClick = () => {
+    console.log(values);
+  };
 
   const handleButtonModal = () => {
-    navigate("/Home-admin");
+    navigate("/Home-admin", { replace: true });
   };
 
   const [visibleModal, setVisibleModal] = useState(false);
@@ -116,6 +189,7 @@ export const CretateUserStepOne = () => {
             className={
               form.stepOne === "false" ? "content-form-number-one-false" : ""
             }
+            onChange={ButtonDisabledFormOne}
           >
             <input
               type="text"
@@ -206,8 +280,8 @@ export const CretateUserStepOne = () => {
               name="EPS"
             >
               <option value="">EPS</option>
-              {CONSTANTS.EPS.map((eps) => {
-                return <option value={eps}> {eps} </option>;
+              {CONSTANTS.EPS.map((EPS) => {
+                return <option value={EPS}> {EPS} </option>;
               })}
             </select>
           </form>
@@ -218,7 +292,7 @@ export const CretateUserStepOne = () => {
                   ? "button-create-user2"
                   : "button-create-user2-false"
               }
-              disabled={false}
+              disabled={disabled}
               onClick={nextForm}
             >
               Continuar
@@ -253,10 +327,11 @@ export const CretateUserStepOne = () => {
                 ? "content-form-number-two"
                 : "content-form-number-two-false"
             }
+            onChange={ButtonDisabledFormTwo}
           >
             <select
               placeholder="Departamento"
-              value={values.TipoDocumento}
+              value={values.Departamento}
               onChange={handleChange}
               name="Departamento"
             >
@@ -266,12 +341,12 @@ export const CretateUserStepOne = () => {
               })}
             </select>
             <input
-              type="number"
+              type="Text"
               placeholder="Dirección de residencia"
               autoComplete="none"
               className="input-create-user-2"
               name="DirecciónResidencia"
-              value={values.NumeroDocumento}
+              value={values.DirecciónResidencia}
               onChange={handleChange}
             />
 
@@ -280,42 +355,46 @@ export const CretateUserStepOne = () => {
               placeholder="Correo electrónico"
               type="text"
               className="input-calendar-create-user-2"
-              value={values.FechaNacimiento}
+              value={values.CorreoElectrónico}
               name="CorreoElectrónico"
+              autoComplete="none"
             />
             <input
               onChange={handleChange}
               placeholder="Celular"
               type="number"
               className="input-calendar-create-user-2"
-              value={values.FechaNacimiento}
+              value={values.Celular}
               name="Celular"
+              autoComplete="none"
             />
             <input
               onChange={handleChange}
               placeholder="Teléfono fijo"
               type="number"
               className="input-calendar-create-user-2"
-              value={values.FechaNacimiento}
+              value={values.TeléfonoFijo}
               name="TeléfonoFijo"
+              autoComplete="none"
             />
             <input
               onChange={handleChange}
               placeholder="Teléfono de la oficina"
               type="number"
               className="input-calendar-create-user-2"
-              value={values.FechaNacimiento}
+              value={values.TeléfonoOficina}
               name="TeléfonoOficina"
+              autoComplete="none"
             />
           </form>
           <div className="content-button-create-user-2">
             <button
               className={
                 form.stepTwo === "true"
-                  ? "button-create-user2-step-two"
+                  ? "button-create-user2-step-four"
                   : "button-create-user2-step-two-false"
               }
-              disabled={false}
+              disabled={disabledFormtwo}
               onClick={nextForm}
             >
               Continuar
@@ -350,6 +429,7 @@ export const CretateUserStepOne = () => {
                 ? "content-form-number-three"
                 : "content-form-number-three-false"
             }
+            onChange={ButtonDisabledFormThree}
           >
             <input
               type="text"
@@ -357,7 +437,7 @@ export const CretateUserStepOne = () => {
               autoComplete="none"
               className="input-create-user-2"
               name="Nombres1"
-              value={values.NumeroDocumento}
+              value={values.Nombres1}
               onChange={handleChange}
             />
 
@@ -365,24 +445,27 @@ export const CretateUserStepOne = () => {
               onChange={handleChange}
               placeholder="Apellidos"
               type="text"
+              autoComplete="none"
               className="input-calendar-create-user-2"
-              value={values.FechaNacimiento}
-              name="Apellidos"
+              value={values.Apellidos1}
+              name="Apellidos1"
             />
             <input
               onChange={handleChange}
               placeholder="Parentesco"
               type="text"
+              autoComplete="none"
               className="input-calendar-create-user-2"
-              value={values.FechaNacimiento}
+              value={values.Parentesco}
               name="Parentesco"
             />
             <input
               onChange={handleChange}
               placeholder="Teléfono de contacto"
-              type="text"
+              type="number"
+              autoComplete="none"
               className="input-calendar-create-user-2"
-              value={values.FechaNacimiento}
+              value={values.TeléfonoContacto}
               name="TeléfonoContacto"
             />
           </form>
@@ -390,10 +473,10 @@ export const CretateUserStepOne = () => {
             <button
               className={
                 form.stepThree === "true"
-                  ? "button-create-user2-step-two"
+                  ? "button-create-user2-step-four"
                   : "button-create-user2-step-two-false"
               }
-              disabled={false}
+              disabled={disabledFormThree}
               onClick={nextForm}
             >
               Continuar
@@ -437,6 +520,7 @@ export const CretateUserStepOne = () => {
                 ? "content-form-number-four"
                 : "content-form-number-four-false"
             }
+            onChange={ButtonDisabledFormFour}
           >
             <input
               type="text"
@@ -444,15 +528,15 @@ export const CretateUserStepOne = () => {
               autoComplete="none"
               className="input-create-user-2"
               name="Profesion"
-              value={values.NumeroDocumento}
+              value={values.Profesion}
               onChange={handleChange}
             />
 
             <select
               placeholder="Rol"
-              value={values.TipoDocumento}
+              value={values.Rol}
               onChange={handleChange}
-              name="Departamento"
+              name="Rol"
             >
               <option value="">Rol</option>
               {CONSTANTS.Rol.map((Rol) => {
@@ -464,8 +548,9 @@ export const CretateUserStepOne = () => {
               placeholder="Contraseña"
               type="text"
               className="input-calendar-create-user-2"
-              value={values.FechaNacimiento}
+              value={values.Contraseña}
               name="Contraseña"
+              autoComplete="none"
             />
           </form>
           <div className="content-button-create-user-2">
@@ -475,7 +560,7 @@ export const CretateUserStepOne = () => {
                   ? "button-create-user2-step-four"
                   : "button-create-user2-step-four-false"
               }
-              disabled={false}
+              disabled={disabledFormFour}
               onClick={buttonActiveModal}
             >
               Continuar
