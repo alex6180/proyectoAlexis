@@ -7,11 +7,13 @@ import searchIcon from "../../../Common/assets/Vector-search.png";
 import { Header } from "../../Components/Header/Header";
 import iconBottom from "../../../Common/assets/Vector-icon-floating-bottom.png";
 import { useNavigate } from "react-router-dom";
+import { InfoUsers } from "../../../Common/Constans/Users";
 export const HomeAdmin = () => {
   const navigate = useNavigate();
   const buttonActiontwo = () => {
     navigate("/cretate-user-init");
   };
+
   return (
     <div>
       <Helmet bodyAttributes={{ style: "background : #F4F9FF;" }} />
@@ -39,11 +41,27 @@ export const HomeAdmin = () => {
         <img src={filterIcon} className="icon-filter-home-admin" />
       </div>
       <div className="content-card">
-        <div className="card">
-          <h1 className="text-card">Josh Ryan</h1>
-          <p className="text-2-card">Administrador</p>
-          <input className="checkbox-card" type="checkbox" />
-        </div>
+        {InfoUsers.map((i) => {
+          return (
+            <>
+              <div className="card">
+                <h1 className="text-card">
+                  {i.Nombres} {i.Apellidos}{" "}
+                </h1>
+                <p
+                  className={
+                    i.Rol === "Administrador"
+                      ? "text-2-card"
+                      : " text-2-card-doctor"
+                  }
+                >
+                  {i.Rol}{" "}
+                </p>
+                <input className="checkbox-card" type="checkbox" />
+              </div>
+            </>
+          );
+        })}
       </div>
       <div className="floating-button" onClick={buttonActiontwo}>
         <img src={iconBottom} className="size-icon-bottom" />
