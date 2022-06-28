@@ -6,17 +6,13 @@ import "./Login.scss";
 
 import { Circles } from "../../Components/Circles/Circles";
 import { useState } from "react";
-import { Link, Navigate, NavLink, useNavigate } from "react-router-dom";
-import { FormikErrors, replace, useFormik } from "formik";
-import { Button } from "../../Components/Button/Button";
+import { useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
 
 export const Login = () => {
   const [disabled, setDisabled] = useState(true);
   const ButtonDisabled = () => {
-    if (!values.usuario) {
-      setDisabled(true);
-    }
-    if (!values.contraseña) {
+    if ((values.usuario, values.contraseña === "")) {
       setDisabled(true);
     } else {
       setDisabled(false);

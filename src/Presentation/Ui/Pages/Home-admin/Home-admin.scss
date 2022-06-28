@@ -1,19 +1,13 @@
 @import "../../Styles/_common.scss";
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
-.content-home-admin {
-  background-color: whitesmoke;
-  width: 100%;
-  height: 99vh;
-  position: absolute;
-  left: 0;
-}
+
 .background-header-home-admin {
   background-color: #ffffff;
-  width: 100%;
+  width: 1440px;
   height: 450px;
   position: absolute;
   left: 0;
-  top: 84px;
+  top: 82px;
   border-radius: 0 0 80px 0;
   box-shadow: 3px 3px 0 0px rgba(0, 0, 0, 0.1);
 }
@@ -23,7 +17,7 @@
   width: 700px;
   height: 550px;
   z-index: 3;
-  top: -16px;
+  top: -15.5px;
 }
 
 .content-circles-home-admin {
@@ -34,30 +28,30 @@
 
 .circle-home-admin {
   background-color: $Blue-primary;
-  border-top-left-radius: 560px;
-  border-top-right-radius: 590px;
+  border-top-left-radius: 270px;
+  border-top-right-radius: 280px;
   position: absolute;
-  height: 36%;
-  left: -3%;
-  top: 25%;
+  height: 360px;
+  left: -66px;
+  top: 150px;
   z-index: 1;
-  width: 40%;
+  width: 580px;
 }
 .circle-second-home-admin {
   background-color: $Blue-primary;
-  border-top-right-radius: 500px;
+  border-top-right-radius: 300px;
   box-shadow: 0px 0px 0px 2px rgba(0.1, 0.1, 0.1, 0.1);
-  border-top-left-radius: 500px;
-  height: 39%;
+  border-top-left-radius: 250px;
+  height: 325px;
   z-index: 2;
   position: absolute;
-  left: -1.5%;
-  top: 31.3%;
-  width: 37%;
+  left: -50px;
+  top: 209px;
+  width: 570px;
 }
 
 .content-text-header-home-admin {
-  width: 800px;
+  width: 600px;
   height: 150px;
   left: 800px;
   top: 180px;
@@ -73,11 +67,155 @@
   color: $Black-primary;
 }
 .subtitle-home-admin {
-  font-weight: 400;
   font-size: 76px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   position: relative;
   top: -30px;
   color: $Black-tertiary;
+}
+
+.content-search-filter {
+  display: flex;
+  // border: 4px solid red;
+  height: 100px;
+  position: absolute;
+  top: 580px;
+  width: 1000px;
+  left: 180px;
+}
+
+.input-home-admin {
+  height: 42px;
+  width: 950px;
+  margin-right: 40px;
+  border: none;
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3.5px;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: rgba(0, 0, 0, 0.6);
+  padding-left: 47px;
+}
+.input-home-admin:focus {
+  border: 0.1px solid $Purple-primary;
+  outline: none;
+  color: $Black-primary;
+}
+.icon-filter-home-admin {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  top: 5px;
+}
+.input-checkbox-home-admin {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 65px;
+}
+
+.text-checkbox {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.15px;
+  color: #bdbdbd;
+  position: absolute;
+  top: 61px;
+  left: 34px;
+}
+
+.icon-seacrh-home-admin {
+  width: 15.08px;
+  height: 15.08px;
+  position: absolute;
+  top: 15px;
+  left: 20px;
+}
+
+.content-card {
+  width: 70%;
+  position: absolute;
+  display: flex;
+  top: 92%;
+  left: 175px;
+}
+
+.card {
+  cursor: pointer;
+  height: 100px;
+  width: 340px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s;
+  background: white;
+  position: relative;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+.checkbox-card {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 14px;
+  top: 39px;
+}
+.text-card {
+  font-size: 26px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: $Black-tertiary;
+  position: relative;
+  left: 64px;
+  top: 19px;
+}
+
+.text-2-card {
+  color: $Black-tertiary;
+  position: relative;
+  left: 64px;
+  bottom: 10px;
+  font-size: 16px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #27ae60;
+}
+
+.floating-button {
+  position: absolute;
+  cursor: pointer;
+  width: 90px;
+  height: 90px;
+  background-color: #2d89ff;
+  top: 650px;
+  left: 1300px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.16);
+}
+.floating-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+}
+
+.size-icon-bottom {
+  width: 56px;
+  height: 43px;
 }
