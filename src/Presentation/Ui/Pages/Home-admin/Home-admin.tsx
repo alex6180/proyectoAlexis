@@ -19,9 +19,14 @@ export const HomeAdmin = () => {
   const [infoUsers, setInfoUsers] = useState(InfoUsers);
   const filtrar = (busqueda: any) => {
     setInfoUsers(
-      InfoUsers.filter((i) =>
-        i.Nombres.toLowerCase().includes(busqueda.toLowerCase())
-      )
+      InfoUsers.filter((i) => {
+        if (i.Nombres.toLowerCase().includes(busqueda.toLowerCase())) {
+          return i;
+        }
+        if (i.Apellidos.toLowerCase().includes(busqueda.toLowerCase())) {
+          return i;
+        }
+      })
     );
   };
 
