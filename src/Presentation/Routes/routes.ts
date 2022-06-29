@@ -30,7 +30,7 @@ export const routes: Routes[] = [
   },
   {
     to: "/UserPage",
-    path: "User-page:id",
+    path: "/User-page/:id",
     Component: UsersPage,
   },
   {

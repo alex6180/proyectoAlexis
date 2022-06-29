@@ -1,0 +1,86 @@
+@import "../../../Styles/_common.scss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
+.content-card {
+  width: 70%;
+  position: absolute;
+  display: grid;
+  column-gap: 80px;
+  grid-template-columns: repeat(3, 310px);
+  top: 92%;
+  left: 175px;
+}
+.card {
+  cursor: pointer;
+  height: 100px;
+  width: 360px;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s;
+  background: white;
+  position: relative;
+  margin-bottom: 34px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.text-2-card {
+  color: $Black-tertiary;
+  position: relative;
+  left: 64px;
+  bottom: 10px;
+  font-size: 16px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #27ae60;
+}
+.text-card {
+  font-size: 26px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  color: $Black-tertiary;
+  position: relative;
+  left: 64px;
+  top: 19px;
+}
+.text-2-card-doctor {
+  color: $Black-tertiary;
+  position: relative;
+  left: 64px;
+  bottom: 10px;
+  font-size: 16px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #2d9cdb;
+}
+.text-2-card-Patinete {
+  color: $Black-tertiary;
+  position: relative;
+  left: 64px;
+  bottom: 10px;
+  font-size: 16px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #ef5da8;
+}
+.text-2-card-Laboratorista {
+  color: $Black-tertiary;
+  position: relative;
+  left: 64px;
+  bottom: 10px;
+  font-size: 16px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #f2994a;
+}
+.checkbox-card {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 14px;
+  top: 39px;
+}

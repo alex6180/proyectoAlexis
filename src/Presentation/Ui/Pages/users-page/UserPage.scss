@@ -1,0 +1,192 @@
+@import "../../Styles/_common.scss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
+
+.Button-user-page {
+  color: $Blue-primary;
+  cursor: pointer;
+  left: 14%;
+  position: absolute;
+  top: 17%;
+  z-index: 4;
+}
+.size-arrow-user-page {
+  left: -60%;
+  height: 23.67px;
+  position: absolute;
+  top: 28%;
+  width: 23.67px;
+}
+.text-button-user-page {
+  line-height: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.background-header-user-page {
+  background-color: #ffffff;
+  width: 1440px;
+  height: 450px;
+  position: absolute;
+  left: 0;
+  top: 82px;
+  border-radius: 0 0 80px 0;
+  box-shadow: 3px 3px 0 0px rgba(0, 0, 0, 0.1);
+}
+.content-circles-user-page {
+  z-index: 1;
+  height: 300px;
+  width: 100px;
+}
+.circle-user-page {
+  border-radius: 1000px;
+  border-bottom-right-radius: 142px;
+  border-bottom-left-radius: 160px;
+  border-top-right-radius: 20px;
+  width: 380px;
+  height: 380px;
+  background-color: $Blue-primary;
+  position: absolute;
+  left: 73.6%;
+  top: 70px;
+}
+.circle-second-user-page {
+  background-color: $Blue-primary;
+  box-shadow: 0px 0px 0px 2px rgba(0.1, 0.1, 0.1, 0.1);
+  border-radius: 1000px;
+  border-bottom-right-radius: 142px;
+  border-bottom-left-radius: 160px;
+  border-top-right-radius: 20px;
+  height: 308px;
+  z-index: 1;
+  position: absolute;
+  left: 78.7%;
+  top: 140px;
+  width: 305px;
+}
+.size-doctor-user-page {
+  width: 800px;
+  height: 450px;
+  position: absolute;
+  left: 42%;
+  z-index: 2;
+  top: 0.4%;
+}
+.text-header-user-page {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 76px;
+  color: $Black-tertiary;
+  position: absolute;
+  bottom: 40px;
+}
+.text-2-subtitle-admin {
+  position: absolute;
+  top: 80px;
+  font-size: 36px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #27ae60;
+}
+.text-2-subtitle-doctor {
+  position: absolute;
+  top: 80px;
+  font-size: 36px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #2d9cdb;
+}
+.text-2-subtitle-Patinete {
+  position: absolute;
+  top: 80px;
+  font-size: 36px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #ef5da8;
+}
+.text-2-subtitle-Laboratorista {
+  position: absolute;
+  top: 80px;
+  font-size: 36px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #f2994a;
+}
+.content-text-header-user-page {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 700px;
+  height: 200px;
+}
+.content-dates-personals {
+  display: flex;
+  margin-bottom: 60px;
+}
+.background-info-of-dates {
+  flex-direction: column;
+  gap: 16px;
+  width: 1760px;
+  padding: 15px;
+  height: 314px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.background-info-of-dates-personals {
+  flex-direction: column;
+  gap: 16px;
+  width: 630px;
+  padding: 15px;
+  height: 354px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.content-info-user-page {
+  width: 100%;
+  position: absolute;
+  display: grid;
+  column-gap: 80px;
+  grid-template-columns: repeat(2, 380px);
+  top: 120%;
+  left: 0;
+  justify-content: center;
+}
+
+.text-info {
+  position: absolute;
+  color: rgba(63, 63, 63, 0.4);
+  top: -48px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+.text-info-2 {
+  position: absolute;
+  color: rgba(63, 63, 63, 0.4);
+  top: 46%;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.text-info-user {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: $Black-secondary;
+}
+
+span {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333333;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import "./Home-admin.scss";
 import Doctor from "../../../Common/assets/pose_1-home-admin.png";
@@ -8,12 +8,28 @@ import { Header } from "../../Components/Header/Header";
 import iconBottom from "../../../Common/assets/Vector-icon-floating-bottom.png";
 import { useNavigate } from "react-router-dom";
 import { InfoUsers } from "../../../Common/Constans/Users";
+import { CardUser } from "./card-user/CardUser";
 export const HomeAdmin = () => {
   const navigate = useNavigate();
   const buttonActiontwo = () => {
     navigate("/cretate-user-init");
   };
+  const [busqueda, setBusqueda] = useState("");
 
+  const [infoUsers, setInfoUsers] = useState(InfoUsers);
+  const filtrar = (busqueda: any) => {
+    setInfoUsers(
+      InfoUsers.filter((i) =>
+        i.Nombres.toLowerCase().includes(busqueda.toLowerCase())
+      )
+    );
+  };
+
+  console.log(filtrar);
+  const handleChange = (e: any) => {
+    setBusqueda(e.target.value);
+    filtrar(e.target.value);
+  };
   return (
     <div>
       <Helmet bodyAttributes={{ style: "background : #F4F9FF;" }} />
@@ -34,6 +50,8 @@ export const HomeAdmin = () => {
           placeholder="Busca doctores, pacientes..."
           className="input-home-admin"
           type="text"
+          onChange={handleChange}
+          value={busqueda}
         />
         <input className="input-checkbox-home-admin" type="checkbox" />
 
@@ -41,25 +59,11 @@ export const HomeAdmin = () => {
         <img src={filterIcon} className="icon-filter-home-admin" />
       </div>
       <div className="content-card">
-        {InfoUsers.map((i) => {
+        {infoUsers.map(({ Nombres, Apellidos, Rol }) => {
           return (
-            <>
-              <div className="card">
-                <h1 className="text-card">
-                  {i.Nombres} {i.Apellidos}{" "}
-                </h1>
-                <p
-                  className={
-                    i.Rol === "Administrador"
-                      ? "text-2-card"
-                      : " text-2-card-doctor"
-                  }
-                >
-                  {i.Rol}{" "}
-                </p>
-                <input className="checkbox-card" type="checkbox" />
-              </div>
-            </>
+            <div>
+              <CardUser Nombres={Nombres} Apellidos={Apellidos} Rol={Rol} />
+            </div>
           );
         })}
       </div>
