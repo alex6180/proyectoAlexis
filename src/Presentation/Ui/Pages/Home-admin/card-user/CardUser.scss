@@ -46,6 +46,7 @@
   position: relative;
   left: 64px;
   top: 19px;
+  margin-bottom: 40px;
 }
 .text-2-card-doctor {
   color: $Black-tertiary;
@@ -83,4 +84,6 @@
   position: absolute;
   left: 14px;
   top: 39px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
 }

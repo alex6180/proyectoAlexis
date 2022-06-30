@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { InfoUsers } from "../../../Common/Constans/Users";
 import { Header } from "../../Components/Header/Header";
 import Arrow from "../../../Common/assets/Vector1.png";
 import { Helmet } from "react-helmet";
 import Doctor from "../../../Common/assets/pose_8-user-page.png";
+import Delete from "../../../Common/assets/Vector-icon-delete.png";
+import Edit from "../../../Common/assets/Vector-icon-edit.png";
+import More from "../../../Common/assets/Vector-icon-more.png";
 import "./UserPage.scss";
+import { useState } from "react";
 export const UsersPage = () => {
   const navigate = useNavigate();
   const buttonActionOne = () => {
@@ -16,11 +20,25 @@ export const UsersPage = () => {
     return InfoUsers.find((user) => user.Nombres === id);
   };
 
+  const [btnOptions, setBtnOptions] = useState(true);
+  const [btnOpenModal, setBtnOpenModal] = useState(false);
+  const optionsbtn = () => {
+    setBtnOptions(!btnOptions);
+  };
+
   const { id } = useParams();
 
   const user = getUserById(id);
 
   console.log(user);
+
+  const btnOpen = () => {
+    setBtnOpenModal(true);
+  };
+  const btnhiddmodal = () => {
+    setBtnOptions(true);
+    setBtnOpenModal(false);
+  };
 
   return (
     <div>
@@ -141,6 +159,80 @@ export const UsersPage = () => {
                 Contraseña:<span> {user?.Contraseña} </span>{" "}
               </p>
             </div>
+
+            <div
+              className={
+                btnOpenModal === true
+                  ? "content-btn-floating-true-modal"
+                  : "content-btn-floating"
+              }
+            >
+              <div
+                className={
+                  btnOptions === true
+                    ? "content-button-acctions"
+                    : btnOpenModal === true
+                    ? "content-button-acctions"
+                    : "content-button-acctions-true"
+                }
+              >
+                <div className="icon-and-text-delete">
+                  <div className="icon-delete" onClick={btnOpen}>
+                    <img src={Delete} style={{ width: 28, height: 36 }} />
+                  </div>
+                  <p> Eliminar </p>
+                </div>
+                <div className="icon-and-text-edit">
+                  <div className="icon-edit">
+                    <img src={Edit} style={{ width: 34, height: 36 }} />
+                  </div>
+                  <p> Editar </p>
+                </div>
+              </div>
+
+              <div className="content-button-floating" onClick={optionsbtn}>
+                <label
+                  htmlFor="btn-more"
+                  className={
+                    btnOptions === true
+                      ? "content-icon-btn"
+                      : btnOpenModal === true
+                      ? "content-icon-btn"
+                      : "content-icon-btn-true"
+                  }
+                >
+                  <img src={More} style={{ width: 30, height: 30 }} />
+                </label>
+              </div>
+              <input type="checkbox" id="btn-more" className="checkbox-btn" />
+            </div>
+            <div
+              className={
+                btnOptions === false
+                  ? "background-modal"
+                  : "background-modal-false"
+              }
+            />
+            {btnOpenModal && (
+              <div className="content-modal-user-page">
+                <img src={Delete} />
+                <h1 className="title-modal-user-page">
+                  {" "}
+                  ¿Quieres eliminar el usuario?{" "}
+                </h1>
+                <h1 className="subtitle-modal-user-page">
+                  El usuario se eliminara y perderas la información relacionada
+                  con el.
+                </h1>
+                <div className="content-btn-text">
+                  <p className="text-btn-one"> Eliminar usuario </p>
+                  <p className="text-btn-two" onClick={btnhiddmodal}>
+                    {" "}
+                    Aceptar{" "}
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

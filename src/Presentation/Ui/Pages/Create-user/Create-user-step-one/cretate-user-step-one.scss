@@ -1,21 +1,45 @@
 @import "../../../Styles/_common.scss";
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@100&family=Nunito+Sans:wght@300;600;800&display=swap");
+
+.text-create-user-1 {
+  position: relative;
+  display: flex;
+  width: 160px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  cursor: pointer;
+  z-index: 4000;
+  color: #2d89ff;
+  top: 50px;
+  left: 100px;
+}
+.text-create-user-1 h1 {
+  margin-left: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 18px;
+  line-height: 32px;
+}
+
 .image-doctor-create-user-2 {
   background: transparent;
-  position: absolute;
-  height: 72%;
-  left: 6%;
-  top: 28%;
+  position: relative;
+  height: 80vh;
+  left: 88px;
+  top: 20px;
   width: 596px;
+  z-index: 2000;
 }
 
 .content-create-user-4 {
   background: whitesmoke;
-  position: absolute;
-  height: 140vh;
-  left: -3%;
+  position: fixed;
+  left: 0;
   top: 10%;
   width: 60%;
+  height: 100vh;
 }
 
 .button-create-user2:enabled {
@@ -29,10 +53,9 @@
   flex-direction: row;
   height: 44px;
   justify-content: center;
-  left: 100px;
+
   padding: 16px 10px;
-  position: absolute;
-  top: 600px;
+
   width: 402px;
   &:hover {
     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
@@ -55,17 +78,15 @@
   font-size: 18px;
   height: 44px;
   justify-content: center;
-  left: 100px;
   padding: 16px 10px;
-  position: absolute;
-  top: 600px;
+  position: relative;
   width: 402px;
 }
 
 .number-progress-bar-header-create-user-2 {
   background: transparent;
   color: #c4c4c4;
-  position: absolute;
+  position: relative;
   font-family: "Verdana";
   font-size: 16px;
   font-weight: 400;
@@ -78,7 +99,7 @@
   border-radius: 10px;
   height: 16px;
   left: 16%;
-  position: absolute;
+  position: relative;
   bottom: 136%;
   width: 410px;
 }
@@ -107,32 +128,37 @@
   font-weight: 700;
   font-size: 30px;
   left: 16%;
-  line-height: 24px;
-  position: absolute;
+  position: relative;
   top: -32%;
 }
 
 .content-form-number-one-false {
   visibility: hidden;
 }
-
+.content-button-create-user-3 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 564px;
+}
 .second-text-header-create-user-2 {
   color: $Black-secondary;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
   left: 16%;
-  position: absolute;
+  position: relative;
   width: 452px;
   top: -20%;
 }
 
 .inputs-create-user-one {
-  left: 58.5%;
+  left: 60%;
   position: absolute;
-  top: 55%;
+  overflow-x: hidden;
+  top: 16%;
   width: 500px;
   visibility: visible;
 }
@@ -207,7 +233,7 @@ select:focus {
 .content-button-create-user-2 {
   left: -20px;
   position: absolute;
-  top: 50px;
+  top: -1250px;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
@@ -229,9 +255,6 @@ input[type="number"]::-webkit-inner-spin-button {
     left: 82%;
     top: 18%;
     position: absolute;
-  }
-  .content-create-user-4 {
-    height: 120%;
   }
 }
 
@@ -311,61 +334,13 @@ input[type="number"]::-webkit-inner-spin-button {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+
   left: 16%;
   position: absolute;
   width: 452px;
   top: -34%;
 }
 
-.button-create-user2-step-two:enabled {
-  align-items: center;
-  background: $Blue-primary;
-  border: none;
-  border-radius: 8px;
-  color: $Background-white;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  height: 44px;
-  justify-content: center;
-  left: 100px;
-  padding: 16px 10px;
-  position: absolute;
-  top: 320px;
-  width: 402px;
-  &:hover {
-    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-  }
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-}
-
-.button-create-user2-step-two:disabled {
-  align-items: center;
-  background: #75b2ff;
-  background: $Blue-primary;
-  border: none;
-  border-radius: 8px;
-  color: $Background-white;
-  cursor: pointer;
-  display: flex;
-  flex-direction: row;
-  height: 44px;
-  justify-content: center;
-  left: 100px;
-  padding: 16px 10px;
-  position: absolute;
-  top: 320px;
-  width: 402px;
-  &:hover {
-    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-  }
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-}
 .button-create-user2-step-two-false {
   visibility: hidden;
 }
@@ -409,7 +384,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .inputs-create-user-three {
   left: 58.5%;
   position: absolute;
-  top: 42%;
+  top: 45%;
   width: 500px;
   visibility: visible;
 }
@@ -418,14 +393,6 @@ input[type="number"]::-webkit-inner-spin-button {
   visibility: hidden;
 }
 
-.content-create-user-4-step-three {
-  background: whitesmoke;
-  position: absolute;
-  height: 116%;
-  left: -3%;
-  top: -5%;
-  width: 60%;
-}
 .content-create-user-4-modal {
   background: rgba(0, 0, 0, 0.6);
 
@@ -443,7 +410,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+
   left: 16%;
   position: absolute;
   width: 452px;
@@ -483,7 +450,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  line-height: 24px;
+
   left: 16%;
   position: absolute;
   width: 402px;
@@ -502,7 +469,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .inputs-create-user-four {
   left: 58.5%;
   position: absolute;
-  top: 37%;
+  top: 40%;
   width: 500px;
   visibility: visible;
 }
@@ -511,6 +478,88 @@ input[type="number"]::-webkit-inner-spin-button {
   visibility: hidden;
 }
 
+.button-create-user2-step-Three:enabled {
+  align-items: center;
+  background: $Blue-primary;
+  border: none;
+  border-radius: 8px;
+  color: $Background-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 44px;
+  justify-content: center;
+  padding: 16px 10px;
+  position: absolute;
+  top: 90px;
+  width: 402px;
+  &:hover {
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.button-create-user2-step-Three:disabled {
+  align-items: center;
+  background: #75b2ff;
+  border: none;
+  border-radius: 8px;
+  color: $Background-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  height: 44px;
+  justify-content: center;
+  padding: 16px 10px;
+  position: relative;
+  top: 90px;
+  width: 402px;
+}
+.button-create-user2-step-two:enabled {
+  align-items: center;
+  background: $Blue-primary;
+  border: none;
+  border-radius: 8px;
+  color: $Background-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 44px;
+  justify-content: center;
+  padding: 16px 10px;
+  position: absolute;
+  top: -40px;
+  width: 402px;
+  &:hover {
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.button-create-user2-step-two:disabled {
+  align-items: center;
+  background: #75b2ff;
+  border: none;
+  border-radius: 8px;
+  color: $Background-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  height: 44px;
+  justify-content: center;
+  padding: 16px 10px;
+  position: relative;
+  top: -40px;
+  width: 402px;
+}
 .button-create-user2-step-four:enabled {
   align-items: center;
   background: $Blue-primary;
@@ -522,10 +571,9 @@ input[type="number"]::-webkit-inner-spin-button {
   flex-direction: row;
   height: 44px;
   justify-content: center;
-  left: 100px;
   padding: 16px 10px;
   position: absolute;
-  top: 340px;
+  top: 200px;
   width: 402px;
   &:hover {
     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
@@ -548,10 +596,9 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 18px;
   height: 44px;
   justify-content: center;
-  left: 100px;
   padding: 16px 10px;
-  position: absolute;
-  top: 340px;
+  position: relative;
+  top: 200px;
   width: 402px;
 }
 
@@ -607,7 +654,7 @@ input[type="number"]::-webkit-inner-spin-button {
   top: 25px;
 }
 
-.button-modal {
+.button-modal-step-one {
   color: $Blue-primary;
   cursor: pointer;
   font-family: "Montserrat", sans-serif;
@@ -615,4 +662,26 @@ input[type="number"]::-webkit-inner-spin-button {
   font-weight: 600;
   position: relative;
   top: 25px;
+}
+
+.circle-create-user-init {
+  background-color: $Blue-primary;
+  border-top-left-radius: 560px;
+  border-top-right-radius: 590px;
+  position: absolute;
+  height: 57%;
+  left: -15%;
+  top: 43%;
+  width: 89%;
+}
+.circle-second-create-user-init {
+  background-color: $Blue-primary;
+  border-top-right-radius: 500px;
+  box-shadow: 0px 4px 10px rgba(0.7, 0.7, 0.7, 0.4);
+  border-top-left-radius: 500px;
+  height: 49%;
+  position: absolute;
+  left: -9%;
+  top: 51%;
+  width: 74%;
 }

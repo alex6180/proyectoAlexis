@@ -17,7 +17,7 @@ const DEV = {
   TipoSangre: ["A+", "A-", "B+", "B-", "O-", "O+"],
   Sexo: ["Hombre", "Mujer"],
   TipoDocumento: ["TI", "CC", "RC", "Pasaporte"],
-  Rol: ["Administrador", "Doctor", "laboratorista", "Paciente"],
+  Rol: ["Administrador", "Doctor", "Laboratorista", "Paciente"],
   Departamento: [
     "Leticia",
     "Medelllin",
@@ -71,7 +71,7 @@ const PROD = {
   TipoSangre: ["A+", "A-", "B+", "B-", "O-", "O+"],
   Sexo: ["Hombre", "Mujer"],
   TipoDocumento: ["TI", "CC", "RC", "Pasaporte"],
-  Rol: ["Administrador", "Doctor", "laboratorista", "Paciente"],
+  Rol: ["Administrador", "Doctor", "Laboratorista", "Paciente"],
   Departamento: [
     "Leticia",
     "Medelllin",

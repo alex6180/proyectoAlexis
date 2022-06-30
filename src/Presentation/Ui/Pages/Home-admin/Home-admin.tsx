@@ -6,16 +6,19 @@ import filterIcon from "../../../Common/assets/Vector-icon-filter.png";
 import searchIcon from "../../../Common/assets/Vector-search.png";
 import { Header } from "../../Components/Header/Header";
 import iconBottom from "../../../Common/assets/Vector-icon-floating-bottom.png";
+import iconBottomModal from "../../../Common/assets/Vector-close-modal.png";
 import { useNavigate } from "react-router-dom";
 import { InfoUsers } from "../../../Common/Constans/Users";
 import { CardUser } from "./card-user/CardUser";
+import { CONSTANTS } from "../../../Common/Constans/Constans";
+import { useFormik } from "formik";
 export const HomeAdmin = () => {
   const navigate = useNavigate();
   const buttonActiontwo = () => {
     navigate("/cretate-user-init");
   };
   const [busqueda, setBusqueda] = useState("");
-
+  const [visibleModal, setVisibleModal] = useState(false);
   const [infoUsers, setInfoUsers] = useState(InfoUsers);
   const filtrar = (busqueda: any) => {
     setInfoUsers(
@@ -29,12 +32,29 @@ export const HomeAdmin = () => {
       })
     );
   };
-
+  const buttonActiveModal = () => {
+    setVisibleModal(!visibleModal);
+  };
   console.log(filtrar);
-  const handleChange = (e: any) => {
+  const handleChangeOne = (e: any) => {
     setBusqueda(e.target.value);
     filtrar(e.target.value);
   };
+
+  const [checkBox, setcheckBox] = useState("false");
+  const [checkBoxCard, setcheckBoxCard] = useState("false");
+
+  console.log(checkBox, checkBoxCard);
+
+  const onBox = () => {
+    if (checkBox === "true") {
+      setcheckBoxCard("true");
+    }
+    if (checkBox === "false") {
+      setcheckBoxCard("false");
+    }
+  };
+
   return (
     <div>
       <Helmet bodyAttributes={{ style: "background : #F4F9FF;" }} />
@@ -55,26 +75,80 @@ export const HomeAdmin = () => {
           placeholder="Busca doctores, pacientes..."
           className="input-home-admin"
           type="text"
-          onChange={handleChange}
+          onChange={handleChangeOne}
           value={busqueda}
         />
-        <input className="input-checkbox-home-admin" type="checkbox" />
-
-        <h1 className="text-checkbox"> Seleccionar todo </h1>
-        <img src={filterIcon} className="icon-filter-home-admin" />
+        <div className="content-checkbox" onChange={onBox}>
+          <input
+            className="input-checkbox-home-admin"
+            value={checkBox}
+            type="checkbox"
+          />
+          <h1 className="text-checkbox"> Seleccionar todo </h1>
+        </div>
+        <div onClick={buttonActiveModal}>
+          <img src={filterIcon} className="icon-filter-home-admin" />
+        </div>
       </div>
       <div className="content-card">
         {infoUsers.map(({ Nombres, Apellidos, Rol }) => {
           return (
             <div>
-              <CardUser Nombres={Nombres} Apellidos={Apellidos} Rol={Rol} />
+              <CardUser
+                Nombres={Nombres}
+                Apellidos={Apellidos}
+                Rol={Rol}
+                checBox={checkBoxCard}
+              />
             </div>
           );
         })}
       </div>
+      <div className="text-alert">
+        {infoUsers.length === 0 && busqueda && (
+          <p>
+            no se pudo encontrar ningun usuario con el nombre o apellido:
+            <strong> {busqueda} </strong>
+          </p>
+        )}
+      </div>
       <div className="floating-button" onClick={buttonActiontwo}>
         <img src={iconBottom} className="size-icon-bottom" />
       </div>
+      <div
+        className={
+          visibleModal === true ? "background-modal" : "background-modal-false"
+        }
+      />
+      {visibleModal && (
+        <div className="content-modal-home-admin">
+          <div className="content-header-modal">
+            <h1 className="text-header">Rol</h1>
+            <img
+              className="img-header"
+              src={iconBottomModal}
+              onClick={buttonActiveModal}
+            />
+          </div>
+          <div className="content-body-modal">
+            {CONSTANTS.Rol.map((rol) => {
+              return (
+                <>
+                  <input
+                    type="checkbox"
+                    value={rol}
+                    className="checkbox-text-body"
+                  />
+                  <h1 className="text-body"> {rol} </h1>
+                </>
+              );
+            })}
+            <div className="content-button-create-user-2">
+              <button className="button-modal">Aplicar</button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

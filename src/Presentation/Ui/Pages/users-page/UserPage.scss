@@ -190,3 +190,180 @@ span {
   line-height: 24px;
   color: #333333;
 }
+
+.checkbox-btn {
+  visibility: hidden;
+}
+
+.content-btn-floating {
+  position: absolute;
+  left: 88%;
+  top: -18%;
+  z-index: 3000;
+  flex-direction: column;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.content-btn-floating-true-modal {
+  position: absolute;
+  left: 88%;
+  top: -18%;
+  z-index: 1;
+  flex-direction: column;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.content-button-floating {
+  display: flex;
+  background: $Blue-primary;
+  width: 70px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  transition: all 500ms ease;
+  position: relative;
+}
+
+.content-button-floating:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+}
+
+.content-icon-btn {
+  cursor: pointer;
+  background: transparent;
+  transition: all 500ms ease;
+}
+
+.icon-and-text-delete {
+  display: flex;
+  flex-direction: row-reverse;
+  color: #fff;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  align-items: center;
+}
+// .content-button-acctions {
+//   position: absolute;
+//   left: 30px;
+// }
+.icon-and-text-edit {
+  color: #fff;
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  align-items: center;
+}
+.icon-delete {
+  cursor: pointer;
+  margin-left: 10px;
+  background: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  transition: all 500ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-edit {
+  cursor: pointer;
+  margin-left: 10px;
+  background: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  transition: all 500ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-button-acctions div {
+  margin-bottom: -8px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content-button-acctions-true div {
+  margin-bottom: 8px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.content-icon-btn-true {
+  cursor: pointer;
+  background: transparent;
+  transform: rotate(137deg);
+  transition: all 500ms ease;
+}
+
+.content-modal-user-page {
+  position: fixed;
+  width: 639px;
+  height: 468px;
+  left: 25%;
+  z-index: 4000;
+  background: #ffffff;
+  border-radius: 8px;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-modal-user-page {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: $Black-primary;
+}
+
+.subtitle-modal-user-page {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: $Black-secondary;
+  width: 481px;
+  height: 64px;
+  text-align: center;
+}
+.content-btn-text {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.text-btn-one {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #a22027;
+  margin-bottom: 2px;
+}
+.text-btn-two {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: $Blue-primary;
+  cursor: pointer;
+}

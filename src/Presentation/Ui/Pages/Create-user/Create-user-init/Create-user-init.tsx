@@ -24,7 +24,7 @@ export const CreateUserInit = () => {
       <div className="content-img-create-user-1">
         <img src={Doctor} className="size-doctor-create-user-1" />
       </div>
-      <div className="text-create-user-1" onClick={buttonActionOne}>
+      <div className="text-create-user" onClick={buttonActionOne}>
         <img src={Arrow} className="size-arrow-create-user-1" />
         <h1 className="text-button-create-user-1"> Regresar </h1>
       </div>
