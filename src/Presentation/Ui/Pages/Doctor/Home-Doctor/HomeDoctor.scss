@@ -1,0 +1,77 @@
+@import "../../../Styles/_common.scss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
+
+.size-img-home-doctor {
+  width: 700px;
+  height: 690px;
+  position: absolute;
+  top: 73px;
+  left: 40px;
+}
+
+.content-text-body {
+  font-family: "Montserrat";
+  position: absolute;
+  width: 600px;
+  left: 800px;
+  top: 250px;
+}
+.content-text-body-with-users {
+  font-family: "Montserrat";
+  position: absolute;
+  width: 600px;
+  left: 800px;
+  top: 130px;
+}
+.text-one {
+  font-weight: 400;
+  font-size: 64px;
+  letter-spacing: -0.3px;
+  color: #1a1a1a;
+  margin-bottom: -40px;
+}
+.text-two {
+  font-weight: 700;
+  font-size: 76px;
+  letter-spacing: -0.3px;
+  color: $Black-tertiary;
+}
+.text-one-with-users {
+  width: 600px;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+.content-text-three-with-users {
+  width: 500px;
+  top: 400px;
+  left: 800px;
+  position: relative;
+  border: 1px solid red;
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+  height: 300px;
+}
+.content-home-doctor {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  left: 0;
+}
+
+.input-home-doctor {
+  border-radius: 3.5px;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  height: 45px;
+  margin-bottom: 25px;
+  position: relative;
+  width: 384px;
+  right: 80px;
+}

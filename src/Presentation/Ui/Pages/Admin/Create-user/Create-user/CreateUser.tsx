@@ -1,7 +1,7 @@
-import { Header } from "../../../Components/Header/Header";
-import Doctor from "../../../../Common/assets/pose_1.png";
+import { Header } from "../../../../Components/Header/Header";
+import Doctor from "../../../../../Common/assets/pose_1.png";
 import "./Create-user.scss";
-import { Button } from "../../../Components/Button/Button";
+import { Button } from "../../../../Components/Button/Button";
 import { useNavigate } from "react-router-dom";
 
 export const CreateUser = () => {

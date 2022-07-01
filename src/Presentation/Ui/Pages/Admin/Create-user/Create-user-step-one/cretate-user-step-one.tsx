@@ -1,12 +1,12 @@
-import { Header } from "../../../Components/Header/Header";
-import Arrow from "../../../../Common/assets/Vector1.png";
-import Doctor from "../../../../Common/assets/pose_8.png";
-import Check from "../../../../Common/assets/Vector-check.png";
+import { Header } from "../../../../Components/Header/Header";
+import Arrow from "../../../../../Common/assets/Vector1.png";
+import Doctor from "../../../../../Common/assets/pose_8.png";
+import Check from "../../../../../Common/assets/Vector-check.png";
 import "./cretate-user-step-one.scss";
 
 import React, { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
-import { CONSTANTS } from "../../../../Common/Constans/Constans";
+import { CONSTANTS } from "../../../../../Common/Constans/Constans";
 import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 

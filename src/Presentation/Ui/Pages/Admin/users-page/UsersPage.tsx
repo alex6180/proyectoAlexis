@@ -1,13 +1,13 @@
 import React, { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { InfoUsers } from "../../../Common/Constans/Users";
-import { Header } from "../../Components/Header/Header";
-import Arrow from "../../../Common/assets/Vector1.png";
+import { InfoUsers } from "../../../../Common/Constans/Users";
+import { Header } from "../../../Components/Header/Header";
+import Arrow from "../../../../Common/assets/Vector1.png";
 import { Helmet } from "react-helmet";
-import Doctor from "../../../Common/assets/pose_8-user-page.png";
-import Delete from "../../../Common/assets/Vector-icon-delete.png";
-import Edit from "../../../Common/assets/Vector-icon-edit.png";
-import More from "../../../Common/assets/Vector-icon-more.png";
+import Doctor from "../../../../Common/assets/pose_8-user-page.png";
+import Delete from "../../../../Common/assets/Vector-icon-delete.png";
+import Edit from "../../../../Common/assets/Vector-icon-edit.png";
+import More from "../../../../Common/assets/Vector-icon-more.png";
 import "./UserPage.scss";
 import { useState } from "react";
 export const UsersPage = () => {

@@ -1,11 +1,11 @@
 import React from "react";
-import { Header } from "../../../Components/Header/Header";
-import Doctor from "../../../../Common/assets/pose_7.png";
-import Arrow from "../../../../Common/assets/Vector1.png";
+import { Header } from "../../../../Components/Header/Header";
+import Doctor from "../../../../../Common/assets/pose_7.png";
+import Arrow from "../../../../../Common/assets/Vector1.png";
 
 import "./Create-user-init.scss";
 
-import { Circles } from "../../../Components/Circles/Circles";
+import { Circles } from "../../../../Components/Circles/Circles";
 import { useNavigate } from "react-router-dom";
 export const CreateUserInit = () => {
   const navigate = useNavigate();

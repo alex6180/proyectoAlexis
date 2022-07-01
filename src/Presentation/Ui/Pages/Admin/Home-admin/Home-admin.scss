@@ -1,4 +1,4 @@
-@import "../../Styles/_common.scss";
+@import "../../../Styles/_common.scss";
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
 
 .background-header-home-admin {
@@ -279,14 +279,13 @@
   left: 0px;
 }
 .text-alert {
-  width: 70%;
-  height: 100px;
-  left: 180px;
+  width: 45%;
+  height: 50px;
+  left: 380px;
   position: relative;
   display: flex;
   justify-content: center;
   top: 340px;
-
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
 }

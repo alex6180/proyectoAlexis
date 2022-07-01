@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import "./Home-admin.scss";
-import Doctor from "../../../Common/assets/pose_1-home-admin.png";
-import filterIcon from "../../../Common/assets/Vector-icon-filter.png";
-import searchIcon from "../../../Common/assets/Vector-search.png";
-import { Header } from "../../Components/Header/Header";
-import iconBottom from "../../../Common/assets/Vector-icon-floating-bottom.png";
-import iconBottomModal from "../../../Common/assets/Vector-close-modal.png";
+import Doctor from "../../../../Common/assets/pose_1-home-admin.png";
+import filterIcon from "../../../../Common/assets/Vector-icon-filter.png";
+import searchIcon from "../../../../Common/assets/Vector-search.png";
+import { Header } from "../../../Components/Header/Header";
+import iconBottom from "../../../../Common/assets/Vector-icon-floating-bottom.png";
+import iconBottomModal from "../../../../Common/assets/Vector-close-modal.png";
 import { useNavigate } from "react-router-dom";
-import { InfoUsers } from "../../../Common/Constans/Users";
+import { InfoUsers } from "../../../../Common/Constans/Users";
 import { CardUser } from "./card-user/CardUser";
-import { CONSTANTS } from "../../../Common/Constans/Constans";
+import { CONSTANTS } from "../../../../Common/Constans/Constans";
 import { useFormik } from "formik";
 export const HomeAdmin = () => {
   const navigate = useNavigate();

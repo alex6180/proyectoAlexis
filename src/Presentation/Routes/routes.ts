@@ -1,11 +1,12 @@
 import { Routes } from "../../Core/Models/route.models";
-import CreateUser from "../Ui/Pages/Create-user/Create-user/CreateUser";
-import { CreateUserInit } from "../Ui/Pages/Create-user/Create-user-init/Create-user-init";
-import { CretateUserStepOne } from "../Ui/Pages/Create-user/Create-user-step-one/cretate-user-step-one";
+import CreateUser from "../Ui/Pages/Admin/Create-user/Create-user/CreateUser";
+import { CreateUserInit } from "../Ui/Pages/Admin/Create-user/Create-user-init/Create-user-init";
+import { CretateUserStepOne } from "../Ui/Pages/Admin/Create-user/Create-user-step-one/cretate-user-step-one";
 
 import { Login } from "../Ui/Pages/Login/Login";
-import { HomeAdmin } from "../Ui/Pages/Home-admin/Home-admin";
-import { UsersPage } from "../Ui/Pages/users-page/UsersPage";
+import { HomeAdmin } from "../Ui/Pages/Admin/Home-admin/Home-admin";
+import { UsersPage } from "../Ui/Pages/Admin/users-page/UsersPage";
+import { HomeDoctor } from "../Ui/Pages/Doctor/Home-Doctor/Home-Doctor";
 
 export const routes: Routes[] = [
   {
@@ -32,6 +33,11 @@ export const routes: Routes[] = [
     to: "/UserPage",
     path: "/User-page/:id",
     Component: UsersPage,
+  },
+  {
+    to: "/HomeDoctor",
+    path: "/Home-doctor",
+    Component: HomeDoctor,
   },
   {
     to: "/login",
