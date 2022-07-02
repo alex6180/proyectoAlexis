@@ -1,6 +1,10 @@
 @import "../../../../Styles/_common.scss";
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@100&family=Nunito+Sans:wght@300;600;800&display=swap");
 
+.content-home-doctor {
+  overflow-x: hidden;
+}
+
 .text-create-user-1 {
   position: relative;
   display: flex;

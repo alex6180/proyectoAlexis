@@ -16,7 +16,12 @@ const DEV = {
   EstadoCivil: ["Soltero", "Casado", "Divorciado", "Union libre", "Viudo"],
   TipoSangre: ["A+", "A-", "B+", "B-", "O-", "O+"],
   Sexo: ["Hombre", "Mujer"],
-  TipoDocumento: ["TI", "CC", "RC", "Pasaporte"],
+  TipoDocumento: [
+    "Tarjeta de identidad",
+    "Cedula de Ciudadania",
+    "Registro Civil",
+    "Pasaporte",
+  ],
   Rol: ["Administrador", "Doctor", "Laboratorista", "Paciente"],
   Departamento: [
     "Leticia",
@@ -70,7 +75,12 @@ const PROD = {
   EstadoCivil: ["Soltero", "Casado", "Divorciado", "Union libre", "Viudo"],
   TipoSangre: ["A+", "A-", "B+", "B-", "O-", "O+"],
   Sexo: ["Hombre", "Mujer"],
-  TipoDocumento: ["TI", "CC", "RC", "Pasaporte"],
+  TipoDocumento: [
+    "Tarjeta de identidad",
+    "Cedula de Ciudadania",
+    "Registro Civil",
+    "Pasaporte",
+  ],
   Rol: ["Administrador", "Doctor", "Laboratorista", "Paciente"],
   Departamento: [
     "Leticia",

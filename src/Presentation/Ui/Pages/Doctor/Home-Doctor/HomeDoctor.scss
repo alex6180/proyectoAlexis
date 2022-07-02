@@ -8,6 +8,21 @@
   top: 73px;
   left: 40px;
 }
+.content-text-three {
+  position: relative;
+  display: flex;
+  width: 593px;
+  height: 80px;
+  top: 500px;
+  left: 800px;
+}
+.text-none-users {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #333333;
+}
 
 .content-text-body {
   font-family: "Montserrat";
@@ -18,7 +33,7 @@
 }
 .content-text-body-with-users {
   font-family: "Montserrat";
-  position: absolute;
+  position: fixed;
   width: 600px;
   left: 800px;
   top: 130px;
@@ -45,14 +60,13 @@
 }
 .content-text-three-with-users {
   width: 500px;
-  top: 400px;
+  top: 380px;
   left: 800px;
   position: relative;
-  border: 1px solid red;
   display: flex;
   justify-content: right;
   flex-direction: column;
-  height: 300px;
+  height: 330px;
 }
 .content-home-doctor {
   display: flex;
@@ -74,4 +88,129 @@
   position: relative;
   width: 384px;
   right: 80px;
+  top: 12px;
+}
+.content-buttons-body-home-page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  flex-direction: column;
+  top: 26%;
+}
+.content-buttons-body-home-page-true-with-user {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  flex-direction: column;
+  top: 60%;
+}
+.btn-search-pacient {
+  align-items: center;
+  background: $Blue-primary;
+  border: none;
+  border-radius: 8px;
+  color: $Background-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 44px;
+  justify-content: center;
+  padding: 16px 10px;
+  width: 402px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  &:hover {
+    color: $Black-primary;
+    background: $Background-white;
+    border: 1px solid $Blue-primary;
+  }
+}
+.btn-add-exam {
+  align-items: center;
+  background: $Background-white;
+  border: 1px solid $Blue-primary;
+  border-radius: 8px;
+  color: $Black-primary;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 44px;
+  justify-content: center;
+  padding: 16px 10px;
+  width: 402px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  &:hover {
+    color: $Background-white;
+    background: $Blue-primary;
+  }
+}
+
+.content-card-user {
+  width: 70%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: -12%;
+  left: 105px;
+}
+.content-card-user-false {
+  display: none;
+}
+
+.background-modal-home-doctor {
+  background: #fff;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: 3000;
+  width: 485px;
+  height: 452px;
+  left: 422px;
+  top: 168px;
+  border-radius: 8px;
+}
+.content-body-modal-home-doctor {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.text-one-modal-home-doctor {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.3px;
+  color: $Black-primary;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.text-two-modal-home-doctor {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  color: $Black-secondary;
+  margin-bottom: 40px;
+}
+
+.btn-close-modal-home-doctor {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: $Blue-primary;
+  cursor: pointer;
 }

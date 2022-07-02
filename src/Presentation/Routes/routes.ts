@@ -7,6 +7,7 @@ import { Login } from "../Ui/Pages/Login/Login";
 import { HomeAdmin } from "../Ui/Pages/Admin/Home-admin/Home-admin";
 import { UsersPage } from "../Ui/Pages/Admin/users-page/UsersPage";
 import { HomeDoctor } from "../Ui/Pages/Doctor/Home-Doctor/Home-Doctor";
+import { PacientPage } from "../Ui/Pages/Doctor/Page-of-pacient/PacientPage";
 
 export const routes: Routes[] = [
   {
@@ -38,6 +39,11 @@ export const routes: Routes[] = [
     to: "/HomeDoctor",
     path: "/Home-doctor",
     Component: HomeDoctor,
+  },
+  {
+    to: "/PacientPage",
+    path: "/Pacient-Page/:id",
+    Component: PacientPage,
   },
   {
     to: "/login",
