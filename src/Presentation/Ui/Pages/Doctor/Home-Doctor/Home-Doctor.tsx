@@ -12,7 +12,6 @@ export const HomeDoctor = () => {
   const [withUser, setwithUser] = useState(false);
   const [infoUsers, setInfoUsers] = useState(Pacients);
   const [busqueda, setBusqueda] = useState("");
-  const [busqueda1, setBusqueda1] = useState("");
 
   const filtrar = (busqueda: any) => {
     if (infoUsers === busqueda) {
@@ -23,16 +22,12 @@ export const HomeDoctor = () => {
           if (i.NumeroDocumento.toString().includes(busqueda.toLowerCase())) {
             return i;
           }
-          if (i.TipoDocumento.toLowerCase().includes(busqueda1.toLowerCase())) {
-            return i;
-          }
         })
       );
   };
   console.log(filtrar);
   const handleChangeOne = (e: any) => {
     setBusqueda(e.target.value);
-    setBusqueda1(e.target.value);
     filtrar(e.target.value);
   };
 
@@ -41,8 +36,6 @@ export const HomeDoctor = () => {
   };
 
   const closeModal = () => {
-    setBusqueda("");
-    setBusqueda1("");
     setwithUser(false);
   };
   return (
@@ -93,11 +86,7 @@ export const HomeDoctor = () => {
             Cuentanos que paciente quieres encontrar.
           </h1>
           <div className="input-home-doctor" onSubmit={handleChangeOne}>
-            <select
-              placeholder="Tipo de documento"
-              name="TipoDocumento"
-              value={busqueda1}
-            >
+            <select placeholder="Tipo de documento" name="busqueda1">
               <option value="">Tipo de documento</option>
               {CONSTANTS.TipoDocumento.map((TipoDocumento) => {
                 return <option value={TipoDocumento}> {TipoDocumento} </option>;
@@ -132,13 +121,21 @@ export const HomeDoctor = () => {
             className={
               withUser === false
                 ? "content-buttons-body-home-page"
+                : infoUsers.length === 0 && busqueda
+                ? "content-buttons-body-home-page"
                 : "content-buttons-body-home-page-true-with-user"
             }
           >
             <button className="btn-search-pacient" onClick={withuser}>
               Buscar Paciente
             </button>
-            <button className="btn-add-exam">Agregar examen</button>
+            <button
+              className={
+                withUser === true ? "btn-add-exam-false" : "btn-add-exam"
+              }
+            >
+              Agregar examen
+            </button>
           </div>
         </div>
       ) : (

@@ -13,6 +13,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Ryan",
     Parentesco: "Hermana",
     TelefonoContacto: 45678965,
+    exams: true,
   },
   {
     Nombres: "Theresa",
@@ -28,6 +29,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Weep",
     Parentesco: "Hermano",
     TelefonoContacto: 45678965,
+    exams: true,
   },
 
   {
@@ -44,6 +46,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Steward",
     Parentesco: "Abuela",
     TelefonoContacto: 45678965,
+    exams: false,
   },
   {
     Nombres: "Dianne",
@@ -59,6 +62,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Russell",
     Parentesco: "Tio",
     TelefonoContacto: 45678965,
+    exams: true,
   },
   {
     Nombres: "Savannah",
@@ -74,6 +78,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Nguyen",
     Parentesco: "Hermano",
     TelefonoContacto: 45678965,
+    exams: false,
   },
   {
     Nombres: "Jane",
@@ -89,6 +94,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Cooper",
     Parentesco: "Primo",
     TelefonoContacto: 45678965,
+    exams: false,
   },
   {
     Nombres: "Darlene",
@@ -104,6 +110,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Robertson",
     Parentesco: "Tio",
     TelefonoContacto: 45678965,
+    exams: false,
   },
   {
     Nombres: "Courtney",
@@ -119,6 +126,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Henry",
     Parentesco: "Abuelo",
     TelefonoContacto: 45678965,
+    exams: true,
   },
   {
     Nombres: "Devon",
@@ -134,6 +142,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Lane",
     Parentesco: "Hermano",
     TelefonoContacto: 45678965,
+    exams: true,
   },
   {
     Nombres: "Jerome",
@@ -149,6 +158,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Bell",
     Parentesco: "Hermano",
     TelefonoContacto: 45678965,
+    exams: false,
   },
   {
     Nombres: "Cameron",
@@ -164,6 +174,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Williamson",
     Parentesco: "Tio",
     TelefonoContacto: 45678965,
+    exams: true,
   },
   {
     Nombres: "Katrhyn",
@@ -179,5 +190,6 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Murphy",
     Parentesco: "Tio",
     TelefonoContacto: 45678965,
+    exams: true,
   },
 ];
