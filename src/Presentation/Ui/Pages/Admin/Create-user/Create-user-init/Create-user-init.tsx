@@ -35,11 +35,10 @@ export const CreateUserInit = () => {
           Ten presente que para la creación de tus usuarios debes tener a la
           mano los datos personales de cada uno de ellos.{" "}
         </h1>
-        <div className="content-button-create-user-1">
-          <button className="button-login" onClick={buttonActiontwo}>
-            ¡Empecemos!
-          </button>
-        </div>
+
+        <button className="button-create-user-1" onClick={buttonActiontwo}>
+          ¡Empecemos!
+        </button>
       </div>
     </div>
   );

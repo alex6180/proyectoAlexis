@@ -1,5 +1,4 @@
 import React from "react";
-import "./Exams.scss";
 export const Exams = ({ nombre, estado }: any) => {
   return (
     <>

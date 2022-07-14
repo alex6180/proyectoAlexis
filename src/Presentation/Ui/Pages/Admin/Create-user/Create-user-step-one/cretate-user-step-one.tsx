@@ -299,7 +299,7 @@ export const CretateUserStepOne = () => {
           }
           defaultValue={form.stepTwo}
         >
-          <div className="content-header-text-create-user-2">
+          <div className="content-header-text-create-user-2-form-two">
             <h1 className="number-progress-bar-header-create-user-2-step-two">
               2 de 4
             </h1>
@@ -401,7 +401,7 @@ export const CretateUserStepOne = () => {
           }
           defaultValue={form.stepThree}
         >
-          <div className="content-header-text-create-user-2">
+          <div className="content-header-text-create-user-2-step-three">
             <h1 className="number-progress-bar-header-create-user-2-step-two">
               3 de 4
             </h1>

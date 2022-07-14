@@ -13,6 +13,18 @@
   width: 100%;
   z-index: 1000;
 }
+.content-header-true {
+  background: $Background-white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  height: 90px;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
 
 .size-logo {
   width: 207px;

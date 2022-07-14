@@ -1,12 +1,33 @@
 @import "../../../Styles/_common.scss";
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
 
+.select-home-doctor {
+  color: rgba(0, 0, 0, 0.5);
+  border: 0.1px solid $Black-tertiary;
+  border-radius: 3.5px;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  font-size: 16px;
+  height: 45px;
+  left: 80px;
+  line-height: 24px;
+  margin-bottom: 25px;
+  padding: 0px 100px 0px 10px;
+  width: 400px;
+  &:focus {
+    border: 0.1px solid $Purple-primary;
+    outline: none;
+  }
+}
+
 .size-img-home-doctor {
-  width: 700px;
-  height: 690px;
+  width: 900px;
+  height: 890px;
   position: absolute;
   top: 73px;
-  left: 40px;
+  left: 150px;
 }
 .content-text-three {
   position: relative;
@@ -33,10 +54,10 @@
 }
 .content-text-body-with-users {
   font-family: "Montserrat";
-  position: fixed;
+  position: absolute;
   width: 600px;
-  left: 800px;
-  top: 130px;
+  left: 60%;
+  top: 25%;
 }
 .text-one {
   font-weight: 400;
@@ -60,8 +81,8 @@
 }
 .content-text-three-with-users {
   width: 500px;
-  top: 380px;
-  left: 800px;
+  top: 54%;
+  left: 60%;
   position: relative;
   display: flex;
   justify-content: right;
@@ -74,6 +95,7 @@
   position: absolute;
   height: 100vh;
   left: 0;
+  overflow: hidden;
 }
 
 .input-home-doctor {
@@ -173,8 +195,8 @@
   z-index: 3000;
   width: 485px;
   height: 452px;
-  left: 422px;
-  top: 168px;
+  left: 38%;
+  top: 33%;
   border-radius: 8px;
 }
 .content-body-modal-home-doctor {
@@ -216,4 +238,20 @@
 }
 .btn-add-exam-false {
   display: none;
+}
+@media (max-width: 1700px) {
+  .size-img-home-doctor {
+    width: 700px;
+    height: 690px;
+    position: absolute;
+    top: 143px;
+    left: 40px;
+  }
+  .content-text-body-with-users {
+    top: 20%;
+  }
+  .background-modal-home-doctor {
+    left: 30%;
+    top: 24%;
+  }
 }

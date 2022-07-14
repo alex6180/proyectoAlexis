@@ -1,4 +1,6 @@
-export const Pacients = [
+import { PacientInfo } from "../../../Core/Models/exams-modals";
+
+export const Pacients: PacientInfo[] = [
   {
     Nombres: "Josh",
     Apellidos: "Ryan",
@@ -13,7 +15,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Ryan",
     Parentesco: "Hermana",
     TelefonoContacto: 45678965,
-    exams: true,
+    exams: [],
   },
   {
     Nombres: "Theresa",
@@ -29,7 +31,68 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Weep",
     Parentesco: "Hermano",
     TelefonoContacto: 45678965,
-    exams: true,
+    exams: [
+      {
+        nombre: "Nombre de examen",
+        estado: "Por revisar",
+        NombrePaciente: "Theresa Weep ",
+        NumeroDocumento: "143567855",
+        TipoExamen: "Tipo A",
+        Resultados: "Theresa_Weep.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Theresa Weep",
+        NumeroDocumento: "45678965",
+        TipoExamen: "Tipo B",
+        Resultados: "Theresa_Weep.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: " Esperando resultados",
+        NombrePaciente: "Theresa Weep",
+        NumeroDocumento: "45678965",
+        TipoExamen: "Tipo A",
+        Resultados: "Theresa_Weep.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Theresa Weep",
+        NumeroDocumento: "45678965",
+        TipoExamen: "Tipo A",
+        Resultados: "Theresa_Weep.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Theresa Weep",
+        NumeroDocumento: "45678965",
+        TipoExamen: "Tipo C",
+        Resultados: "Theresa_Weep.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Theresa Weep",
+        NumeroDocumento: "45678965",
+        TipoExamen: "Tipo A",
+        Resultados: "Theresa_Weep.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+    ],
   },
 
   {
@@ -46,7 +109,68 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Steward",
     Parentesco: "Abuela",
     TelefonoContacto: 45678965,
-    exams: false,
+    exams: [
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Darrell Steward",
+        NumeroDocumento: "35358976",
+        TipoExamen: "Tipo A",
+        Resultados: "Darrell_Steward.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Darrell Steward",
+        NumeroDocumento: "35358976",
+        TipoExamen: "Tipo B",
+        Resultados: "Darrell_Steward.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Por revisar",
+        NombrePaciente: "Darrell Steward",
+        NumeroDocumento: "35358976",
+        TipoExamen: "Tipo A",
+        Resultados: "Darrell_Steward.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Darrell Steward",
+        NumeroDocumento: "35358976",
+        TipoExamen: "Tipo B",
+        Resultados: "Darrell_Steward.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Darrell Steward",
+        NumeroDocumento: "35358976",
+        TipoExamen: "Tipo A",
+        Resultados: "Darrell_Steward.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Darrell Steward",
+        NumeroDocumento: "35358976",
+        TipoExamen: "Tipo C",
+        Resultados: "Darrell_Steward.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+    ],
   },
   {
     Nombres: "Dianne",
@@ -62,7 +186,68 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Russell",
     Parentesco: "Tio",
     TelefonoContacto: 45678965,
-    exams: true,
+    exams: [
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Dianne Russell",
+        NumeroDocumento: "101034957",
+        TipoExamen: "Tipo A",
+        Resultados: "Dianne_Russell.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Dianne Russell",
+        NumeroDocumento: "101034957",
+        TipoExamen: "Tipo B",
+        Resultados: "Dianne_Russell.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Dianne Russell",
+        NumeroDocumento: "101034957",
+        TipoExamen: "Tipo C",
+        Resultados: "Dianne_Russell.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Dianne Russell",
+        NumeroDocumento: "101034957",
+        TipoExamen: "Tipo A",
+        Resultados: "Dianne_Russell.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Por revisar",
+        NombrePaciente: "Dianne Russell",
+        NumeroDocumento: "101034957",
+        TipoExamen: "Tipo B",
+        Resultados: "Dianne_Russell.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Dianne Russell",
+        NumeroDocumento: "101034957",
+        TipoExamen: "Tipo A",
+        Resultados: "Dianne_Russell.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+    ],
   },
   {
     Nombres: "Savannah",
@@ -78,7 +263,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Nguyen",
     Parentesco: "Hermano",
     TelefonoContacto: 45678965,
-    exams: false,
+    exams: [],
   },
   {
     Nombres: "Jane",
@@ -94,7 +279,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Cooper",
     Parentesco: "Primo",
     TelefonoContacto: 45678965,
-    exams: false,
+    exams: [],
   },
   {
     Nombres: "Darlene",
@@ -110,7 +295,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Robertson",
     Parentesco: "Tio",
     TelefonoContacto: 45678965,
-    exams: false,
+    exams: [],
   },
   {
     Nombres: "Courtney",
@@ -126,7 +311,68 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Henry",
     Parentesco: "Abuelo",
     TelefonoContacto: 45678965,
-    exams: true,
+    exams: [
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Courtney Henry",
+        NumeroDocumento: "34562323",
+        TipoExamen: "Tipo A",
+        Resultados: "Courtney_Henry.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Courtney Henry",
+        NumeroDocumento: "34562323",
+        TipoExamen: "Tipo A",
+        Resultados: "Courtney_Henry.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Courtney Henry",
+        NumeroDocumento: "34562323",
+        TipoExamen: "Tipo B",
+        Resultados: "Courtney_Henry.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Courtney Henry",
+        NumeroDocumento: "34562323",
+        TipoExamen: "Tipo C",
+        Resultados: "Courtney_Henry.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Courtney Henry",
+        NumeroDocumento: "34562323",
+        TipoExamen: "Tipo C",
+        Resultados: "Courtney_Henry.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Por revisar",
+        NombrePaciente: "Courtney Henry",
+        NumeroDocumento: "34562323",
+        TipoExamen: "Tipo A",
+        Resultados: "Courtney_Henry.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+    ],
   },
   {
     Nombres: "Devon",
@@ -142,7 +388,68 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Lane",
     Parentesco: "Hermano",
     TelefonoContacto: 45678965,
-    exams: true,
+    exams: [
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Devon Lane",
+        NumeroDocumento: "47564789",
+        TipoExamen: "Tipo A",
+        Resultados: "Devon_Lane.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Devon Lane",
+        NumeroDocumento: "47564789",
+        TipoExamen: "Tipo B",
+        Resultados: "Devon_Lane.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Devon Lane",
+        NumeroDocumento: "47564789",
+        TipoExamen: "Tipo B",
+        Resultados: "Devon_Lane.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Devon Lane",
+        NumeroDocumento: "47564789",
+        TipoExamen: "Tipo A",
+        Resultados: "Devon_Lane.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Devon Lane",
+        NumeroDocumento: "47564789",
+        TipoExamen: "Tipo C",
+        Resultados: "Devon_Lane.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Devon Lane",
+        NumeroDocumento: "47564789",
+        TipoExamen: "Tipo A",
+        Resultados: "Devon_Lane.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+    ],
   },
   {
     Nombres: "Jerome",
@@ -158,7 +465,7 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Bell",
     Parentesco: "Hermano",
     TelefonoContacto: 45678965,
-    exams: false,
+    exams: [],
   },
   {
     Nombres: "Cameron",
@@ -174,7 +481,68 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Williamson",
     Parentesco: "Tio",
     TelefonoContacto: 45678965,
-    exams: true,
+    exams: [
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Cameron Williamson",
+        NumeroDocumento: "20103456",
+        TipoExamen: "Tipo A",
+        Resultados: "Cameron_Williamson.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Cameron Williamson",
+        NumeroDocumento: "20103456",
+        TipoExamen: "Tipo A",
+        Resultados: "Cameron_Williamson.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Cameron Williamson",
+        NumeroDocumento: "20103456",
+        TipoExamen: "Tipo B",
+        Resultados: "Cameron_Williamson.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Cameron Williamson",
+        NumeroDocumento: "20103456",
+        TipoExamen: "Tipo B",
+        Resultados: "Cameron_Williamson.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Por revisar",
+        NombrePaciente: "Cameron Williamson",
+        NumeroDocumento: "20103456",
+        TipoExamen: "Tipo A",
+        Resultados: "Cameron_Williamson.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Revisado",
+        NombrePaciente: "Cameron Williamson",
+        NumeroDocumento: "20103456",
+        TipoExamen: "Tipo C",
+        Resultados: "Cameron_Williamson.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+    ],
   },
   {
     Nombres: "Katrhyn",
@@ -190,6 +558,67 @@ export const Pacients = [
     ApellidosContactoEmergencia: "Murphy",
     Parentesco: "Tio",
     TelefonoContacto: 45678965,
-    exams: true,
+    exams: [
+      {
+        nombre: "Nombre de examen",
+        estado: "Por revisar",
+        NombrePaciente: "Katrhyn Murphy",
+        NumeroDocumento: "1011097651",
+        TipoExamen: "Tipo B",
+        Resultados: "Katrhyn_Murphy.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Esperando resultados",
+        NombrePaciente: "Katrhyn Murphy",
+        NumeroDocumento: "1011097651",
+        TipoExamen: "Tipo A",
+        Resultados: "Katrhyn_Murphy.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Katrhyn Murphy",
+        NumeroDocumento: "1011097651",
+        TipoExamen: "Tipo B",
+        Resultados: "Katrhyn_Murphy.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Sin realizar",
+        NombrePaciente: "Katrhyn Murphy",
+        NumeroDocumento: "1011097651",
+        TipoExamen: "Tipo A",
+        Resultados: "Katrhyn_Murphy.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Por revisar",
+        NombrePaciente: "Katrhyn Murphy",
+        NumeroDocumento: "1011097651",
+        TipoExamen: "Tipo C",
+        Resultados: "Katrhyn_Murphy.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+      {
+        nombre: "Nombre de examen",
+        estado: "Revisado",
+        NombrePaciente: "Katrhyn Murphy",
+        NumeroDocumento: "1011097651",
+        TipoExamen: "Tipo A",
+        Resultados: "Katrhyn_Murphy.pdf",
+        Observaciones:
+          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      },
+    ],
   },
 ];

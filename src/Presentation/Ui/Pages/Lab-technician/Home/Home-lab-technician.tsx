@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Header } from "../../../Components/Header/Header";
 import Doctor from "../../../../Common/assets/pose_1.png";
 import imgModal from "../../../../Common/assets/img-modal-home-doctor.png";
-import "./HomeDoctor.scss";
 import { useState } from "react";
 import { CONSTANTS } from "../../../../Common/Constans/Constans";
 import { Pacients } from "../../../../Common/Constans/Pacients";
 import { CardPacient } from "./CardPacient/CardPacient";
 import { useNavigate } from "react-router-dom";
-export const HomeDoctor = () => {
+export const HomeLabTechnician = () => {
   const [withUsers, setwithUsers] = useState(true);
   const [withUser, setwithUser] = useState(false);
   const [infoUsers, setInfoUsers] = useState(Pacients);
@@ -27,9 +26,6 @@ export const HomeDoctor = () => {
       );
   };
   const navigate = useNavigate();
-  const navpagenext = () => {
-    navigate("/Add-exam-page");
-  };
   console.log(filtrar);
   const handleChangeOne = (e: any) => {
     setBusqueda(e.target.value);
@@ -141,14 +137,6 @@ export const HomeDoctor = () => {
           >
             <button className="btn-search-pacient" onClick={withuser}>
               Buscar Paciente
-            </button>
-            <button
-              className={
-                withUser === true ? "btn-add-exam-false" : "btn-add-exam"
-              }
-              onClick={navpagenext}
-            >
-              Agregar examen
             </button>
           </div>
         </div>

@@ -9,6 +9,12 @@ import { UsersPage } from "../Ui/Pages/Admin/users-page/UsersPage";
 import { HomeDoctor } from "../Ui/Pages/Doctor/Home-Doctor/Home-Doctor";
 import { PacientPage } from "../Ui/Pages/Doctor/Page-of-pacient/PacientPage";
 import { AddExams } from "../Ui/Pages/Doctor/Add-exams/AddExams";
+import { InfoExams } from "../Ui/Pages/Doctor/Info-exams/InfoExams";
+import { HomeLabTechnician } from "../Ui/Pages/Lab-technician/Home/Home-lab-technician";
+import { PacientPageLab } from "../Ui/Pages/Lab-technician/Paciennt-page/PacientPageLab";
+import { InfoExamsLab } from "../Ui/Pages/Lab-technician/Info-exams/InfoExamsLab";
+import { HomePacient } from "../Ui/Pages/Pacient/Home/Home-Pacient";
+import { InfoExamsPacientPage } from "../Ui/Pages/Pacient/Info-exam/InfoExamspacientPage";
 
 export const routes: Routes[] = [
   {
@@ -50,6 +56,36 @@ export const routes: Routes[] = [
     to: "/AddExamPage",
     path: "/Add-exam-page",
     Component: AddExams,
+  },
+  {
+    to: "/InfoExamPage",
+    path: "/InfoExampage",
+    Component: InfoExams,
+  },
+  {
+    to: "/HomeLabTechnician",
+    path: "/Home-Lab-Technician",
+    Component: HomeLabTechnician,
+  },
+  {
+    to: "/PacientPageLab",
+    path: "/Pacient-Page-Lab/:id",
+    Component: PacientPageLab,
+  },
+  {
+    to: "/InfoExamsLab",
+    path: "/Info-Exams-Lab",
+    Component: InfoExamsLab,
+  },
+  {
+    to: "/InfoExamsPacientPage",
+    path: "/Info-Exams-Pacient-Page",
+    Component: InfoExamsPacientPage,
+  },
+  {
+    to: "/HomePacient",
+    path: "/Home-Pacient",
+    Component: HomePacient,
   },
   {
     to: "/login",

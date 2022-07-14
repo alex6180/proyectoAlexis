@@ -15,9 +15,10 @@
 }
 
 .content-button-create-user {
-  left: 1034px;
+  left: 754px;
   position: absolute;
-  top: 114px;
+  top: 44px;
+  border: 1px solid red;
 }
 
 .subtitle-create-user-2 {
@@ -59,17 +60,4 @@
   font-weight: 400;
   position: absolute;
   top: -140px;
-}
-
-@media (max-width: 1700px) {
-  .content-button-create-user {
-    margin-left: -278px;
-    top: -5px;
-  }
-  .subtitle-create-user-2 {
-    top: 128px;
-  }
-  .subtitle-create-user {
-    top: -58px;
-  }
 }

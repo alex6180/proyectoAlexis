@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import "./Home-admin.scss";
 import Doctor from "../../../../Common/assets/pose_1-home-admin.png";
 import filterIcon from "../../../../Common/assets/Vector-icon-filter.png";
 import searchIcon from "../../../../Common/assets/Vector-search.png";
@@ -9,10 +8,11 @@ import iconBottom from "../../../../Common/assets/Vector-icon-floating-bottom.pn
 import iconBottomModal from "../../../../Common/assets/Vector-close-modal.png";
 import { useNavigate } from "react-router-dom";
 import { InfoUsers } from "../../../../Common/Constans/Users";
-import { CardUser } from "./card-user/CardUser";
 import { CONSTANTS } from "../../../../Common/Constans/Constans";
 import { useFormik } from "formik";
-export const HomeAdmin = () => {
+import { Exams } from "./Exams";
+import { ExamsInfo } from "../../../../Common/Constans/Exams";
+export const HomePacient = () => {
   const navigate = useNavigate();
   const buttonActiontwo = () => {
     navigate("/cretate-user-init");
@@ -78,42 +78,19 @@ export const HomeAdmin = () => {
           onChange={handleChangeOne}
           value={busqueda}
         />
-        <div className="content-checkbox" onChange={onBox}>
-          <input
-            className="input-checkbox-home-admin"
-            value={checkBox}
-            type="checkbox"
-          />
-          <h1 className="text-checkbox"> Seleccionar todo </h1>
-        </div>
+        <div className="content-checkbox" onChange={onBox}></div>
         <div onClick={buttonActiveModal}>
           <img src={filterIcon} className="icon-filter-home-admin" />
         </div>
       </div>
-      <div className="content-card">
-        {infoUsers.map(({ Nombres, Apellidos, Rol }) => {
+      <div className="content-card" style={{ top: 320 }}>
+        {ExamsInfo.map(({ nombre, estado }) => {
           return (
             <div>
-              <CardUser
-                Nombres={Nombres}
-                Apellidos={Apellidos}
-                Rol={Rol}
-                checBox={checkBoxCard}
-              />
+              <Exams nombre={nombre} estado={estado} />
             </div>
           );
         })}
-      </div>
-      <div className="text-alert">
-        {infoUsers.length === 0 && busqueda && (
-          <p>
-            no se pudo encontrar ningun usuario con el nombre o apellido:
-            <strong> {busqueda} </strong>
-          </p>
-        )}
-      </div>
-      <div className="floating-button" onClick={buttonActiontwo}>
-        <img src={iconBottom} className="size-icon-bottom" />
       </div>
       <div
         className={

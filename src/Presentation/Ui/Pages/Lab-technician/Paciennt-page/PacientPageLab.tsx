@@ -11,20 +11,17 @@ import searchIcon from "../../../../Common/assets/Vector-search.png";
 import btnNav from "../../../../Common/assets/btn-open-page-add-exam.png";
 import iconBottomModal from "../../../../Common/assets/Vector-close-modal.png";
 import Delete from "../../../../Common/assets/Vector-icon-delete.png";
-import "./PacientPage.scss";
 import { Exams } from "./Exams";
 import { CONSTANTS } from "../../../../Common/Constans/Constans";
-export const PacientPage = () => {
+export const PacientPageLab = () => {
   const { id } = useParams();
   const getPacientById = (id: any) => {
     return Pacients.find((user) => user.Nombres === id);
   };
   const navigate = useNavigate();
-  const navpagenext = () => {
-    navigate("/Add-exam-page");
-  };
+
   const navpageprev = () => {
-    navigate("/Home-doctor");
+    navigate("/Home-Lab-Technician");
   };
   const user = getPacientById(id);
   const [visibleModal, setVisibleModal] = useState(false);
@@ -55,12 +52,6 @@ export const PacientPage = () => {
           {user?.Nombres} {user?.Apellidos}
         </h1>
         <p className="text-2-subtitle-Pacinet">Paciente</p>
-        <button
-          className="btn-add-exam-header-pacient-page"
-          onClick={navpagenext}
-        >
-          Agregar examen
-        </button>
       </div>
       <div className="content-info-pacient-page">
         <div className="content-dates-personals-pacient-page">
@@ -117,13 +108,10 @@ export const PacientPage = () => {
         <div className="content-none-exams">
           <h1 className="text-none-exams">Examenes del paciente</h1>
           <img src={Doctortwo} style={{ width: 454, height: 453 }} />
-          <h1> El paciente aún no tiene examenes registrados. </h1>
-          <button
-            className="btn-add-exam-header-pacient-page"
-            onClick={navpagenext}
-          >
-            Agregar examen
-          </button>
+          <h1>
+            {" "}
+            El paciente aún no tiene examenes registrados para realizar.{" "}
+          </h1>
         </div>
       ) : (
         (console.log(user?.exams.length, "dfghfgh"),

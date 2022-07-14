@@ -3,7 +3,7 @@
 
 .background-header-home-admin {
   background-color: #ffffff;
-  width: 1440px;
+  width: 100%;
   height: 450px;
   position: absolute;
   left: 0;
@@ -14,7 +14,7 @@
 
 .doctor-home-admin {
   position: absolute;
-  width: 700px;
+  width: 35%;
   height: 550px;
   z-index: 3;
   top: -15.5px;
@@ -53,7 +53,7 @@
 .content-text-header-home-admin {
   width: 600px;
   height: 150px;
-  left: 800px;
+  left: 50%;
   top: 180px;
   position: absolute;
   align-items: center;
@@ -77,12 +77,11 @@
 
 .content-search-filter {
   display: flex;
-  // border: 4px solid red;
   height: 100px;
-  position: absolute;
-  top: 580px;
+  position: relative;
+  top: 320px;
   width: 1000px;
-  left: 180px;
+  left: 20%;
 }
 
 .input-home-admin {
@@ -149,12 +148,13 @@
 
 .content-card {
   width: 70%;
-  position: absolute;
+  position: relative;
   display: grid;
   column-gap: 80px;
   grid-template-columns: repeat(3, 310px);
-  top: 92%;
-  left: 175px;
+  top: 420px;
+  left: 20%;
+  margin-bottom: 80px;
 }
 
 .floating-button {
@@ -164,7 +164,7 @@
   height: 90px;
   background-color: #2d89ff;
   top: 650px;
-  left: 1330px;
+  left: 92%;
   border-radius: 100px;
   display: flex;
   align-items: center;
@@ -186,8 +186,8 @@
   width: 648px;
   height: 1200px;
   position: fixed;
-  top: 11.8%;
-  left: 55%;
+  top: 9.6%;
+  left: 67%;
   z-index: 3000;
   display: flex;
   justify-content: center;
@@ -267,7 +267,11 @@
   justify-content: center;
   width: 100%;
   position: relative;
-  top: 0;
+  top: 170px;
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+  }
 }
 .content-button-create-user-2 {
   width: 100%;
@@ -288,4 +292,30 @@
   top: 340px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
+}
+
+@media (max-width: 1700px) {
+  .circle-home-admin {
+    width: 480px;
+    height: 340px;
+    top: 160px;
+    left: -70px;
+  }
+  .circle-second-home-admin {
+    width: 470px;
+  }
+  .content-card {
+    left: 9%;
+  }
+  .content-search-filter {
+    left: 9%;
+  }
+  .content-modal-home-admin {
+    left: 65%;
+    top: 12%;
+    width: 36%;
+  }
+  .button-modal {
+    top: 10px;
+  }
 }

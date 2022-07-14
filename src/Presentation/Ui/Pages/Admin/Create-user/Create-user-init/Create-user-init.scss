@@ -30,11 +30,10 @@
   font-weight: 100;
 }
 .content-texts-create-user-1 {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  left: 8px;
+  position: absolute;
+  top: 40%;
+  width: 30%;
+  left: 60%;
 }
 
 .content-create-user-3 {
@@ -51,9 +50,7 @@
   font-size: 30px;
   font-weight: Bold 700;
   line-height: 32px;
-  left: 840px;
-  position: absolute;
-  top: 300px;
+  margin-bottom: 40px;
 }
 
 .subtitle-create-user-1 {
@@ -61,26 +58,37 @@
   font-family: "Verdana";
   font-weight: 400;
   font-size: 18px;
-  position: absolute;
-  top: 380px;
-  left: 59%;
   width: 342px;
   height: 96px;
+  margin-bottom: 40px;
 }
+.button-create-user-1 {
+  align-items: center;
+  background: $Blue-primary;
+  border: none;
+  border-radius: 8px;
+  color: $Background-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 44px;
+  justify-content: center;
 
-.content-button-create-user-1 {
-  left: 52%;
-  position: absolute;
-  top: 10px;
+  padding: 16px 10px;
+
+  width: 86%;
+  &:hover {
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 @media (min-width: 1700px) {
-  .content-button-create-user-1 {
-    margin-left: -8.5%;
-    margin-top: -50%;
-  }
-  .title-create-user-1 {
-    left: 57%;
+  .button-create-user-1 {
+    width: 66%;
   }
 }
 

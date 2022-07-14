@@ -1,14 +1,6 @@
 @import "../../../../Styles/_common.scss";
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
-.content-card {
-  width: 70%;
-  position: absolute;
-  display: grid;
-  column-gap: 80px;
-  grid-template-columns: repeat(3, 310px);
-  top: 92%;
-  left: 175px;
-}
+
 .card {
   cursor: pointer;
   height: 100px;

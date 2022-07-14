@@ -57,6 +57,13 @@ const DEV = {
     "Mitu",
     "Puerto carreño",
   ],
+  TipoExamen: ["Tipo A", "Tipo B", "Tipo C"],
+  EstadoExamen: [
+    "Sin realizar",
+    "Espera de resultados",
+    "Por revisar",
+    "Revisado",
+  ],
 };
 
 /*********************/
@@ -115,6 +122,13 @@ const PROD = {
     "Cali",
     "Mitu",
     "Puerto carreño",
+  ],
+  TipoExamen: ["Tipo A", "Tipo B", "Tipo C"],
+  EstadoExamen: [
+    "Sin realizar",
+    "Espera de resultados",
+    "Por revisar",
+    "Revisado",
   ],
 };
 

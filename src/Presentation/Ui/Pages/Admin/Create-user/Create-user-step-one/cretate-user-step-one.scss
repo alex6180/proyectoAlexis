@@ -32,7 +32,7 @@
   position: relative;
   height: 80vh;
   left: 88px;
-  top: 20px;
+  top: 40px;
   width: 596px;
   z-index: 2000;
 }
@@ -90,22 +90,18 @@
 .number-progress-bar-header-create-user-2 {
   background: transparent;
   color: #c4c4c4;
-  position: relative;
   font-family: "Verdana";
   font-size: 16px;
   font-weight: 400;
-  left: 85%;
   letter-spacing: 0.15px;
-  bottom: 140%;
+  position: relative;
+  left: 86%;
 }
 .bar {
   background: #c4c4c4;
   border-radius: 10px;
   height: 16px;
-  left: 16%;
-  position: relative;
-  bottom: 136%;
-  width: 410px;
+  width: 100%;
 }
 
 .progress-bar {
@@ -131,13 +127,10 @@
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
-  left: 16%;
-  position: relative;
-  top: -32%;
 }
 
 .content-form-number-one-false {
-  visibility: hidden;
+  display: none;
 }
 .content-button-create-user-3 {
   position: relative;
@@ -152,10 +145,6 @@
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-  left: 16%;
-  position: relative;
-  width: 452px;
-  top: -20%;
 }
 
 .inputs-create-user-one {
@@ -167,11 +156,11 @@
   visibility: visible;
 }
 .inputs-create-user-one-false {
-  visibility: hidden;
+  display: none;
 }
 
 .button-create-user2-false {
-  visibility: hidden;
+  display: none;
 }
 .input-create-user-2 {
   border: 0.1px solid $Black-tertiary;
@@ -207,13 +196,18 @@
   width: 380px;
 }
 
+.content-text-page-create-2 input:focus {
+  border: 0.1px solid $Purple-primary;
+  outline: none;
+  color: $Black-primary;
+}
 input:focus {
   border: 0.1px solid $Purple-primary;
   outline: none;
   color: $Black-primary;
 }
 
-select {
+.content-text-page-create-2 select {
   color: rgba(0, 0, 0, 0.5);
   border: 0.1px solid $Black-tertiary;
   border-radius: 3.5px;
@@ -229,6 +223,26 @@ select {
   padding: 0px 100px 0px 10px;
   width: 400px;
 }
+.inputs-create-user-one select {
+  color: rgba(0, 0, 0, 0.5);
+  border: 0.1px solid $Black-tertiary;
+  border-radius: 3.5px;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  font-size: 16px;
+  height: 45px;
+  left: 80px;
+  line-height: 24px;
+  margin-bottom: 25px;
+  padding: 0px 100px 0px 10px;
+  width: 400px;
+}
+.content-text-page-create-2 select:focus {
+  border: 0.1px solid $Purple-primary;
+  outline: none;
+}
 select:focus {
   border: 0.1px solid $Purple-primary;
   outline: none;
@@ -239,58 +253,43 @@ select:focus {
   position: absolute;
   top: -1250px;
 }
+.content-header-text-create-user-2 {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  position: relative;
+  left: 16%;
+  top: -5px;
+}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 
   margin: 0;
 }
-@media (min-width: 1600px) {
-  .content-button-create-user-1 {
-    left: 60%;
-    position: absolute;
-    top: 980px;
-  }
-  .inputs-create-user-2 {
-    left: 60%;
-    top: 460px;
-  }
-  .number-progress-bar-header-create-user-2 {
-    left: 82%;
-    top: 18%;
-    position: absolute;
-  }
-}
 
 .inputs-create-user-two {
-  left: 58.5%;
-  position: absolute;
-  top: 55%;
+  left: 61%;
+  position: relative;
+  top: 400px;
   width: 500px;
   visibility: visible;
 }
 
 .inputs-create-user-two-false {
-  visibility: hidden;
+  display: none;
 }
 
 .content-form-number-two-false {
-  visibility: hidden;
-}
-
-.content-form-number-two {
-  position: relative;
-  top: -60px;
+  display: none;
 }
 
 .bar-step-two {
   background: #c4c4c4;
   border-radius: 10px;
   height: 16px;
-  left: 16%;
-  position: absolute;
-  bottom: 156%;
-  width: 410px;
+  width: 100%;
 }
 
 .progress-bar-step-two {
@@ -313,24 +312,20 @@ input[type="number"]::-webkit-inner-spin-button {
 .number-progress-bar-header-create-user-2-step-two {
   background: transparent;
   color: #c4c4c4;
-  position: absolute;
   font-family: "Verdana";
   font-size: 16px;
   font-weight: 400;
-  left: 85%;
   letter-spacing: 0.15px;
-  bottom: 160%;
+  position: relative;
+  left: 86%;
 }
+
 .text-header-create-user-2-step-two {
   color: $Black-primary;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
-  left: 16%;
-  line-height: 24px;
-  position: absolute;
-  top: -48%;
 }
 .second-text-header-create-user-2-step-two {
   color: $Black-secondary;
@@ -338,25 +333,25 @@ input[type="number"]::-webkit-inner-spin-button {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-
-  left: 16%;
-  position: absolute;
-  width: 452px;
-  top: -34%;
 }
-
+.content-header-text-create-user-2-form-two {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  position: relative;
+  left: 16%;
+  top: -295px;
+  margin-bottom: -280px;
+}
 .button-create-user2-step-two-false {
-  visibility: hidden;
+  display: none;
 }
 
 .bar-step-three {
   background: #c4c4c4;
   border-radius: 10px;
   height: 16px;
-  left: 16%;
-  position: absolute;
-  bottom: 156%;
-  width: 410px;
+  width: 100%;
 }
 
 .progress-bar-step-three {
@@ -375,38 +370,52 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 65%;
   }
 }
-
+.content-header-text-create-user-2-step-three {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  position: relative;
+  left: 16%;
+  top: -295px;
+  margin-bottom: -280px;
+}
 .content-form-number-three-false {
-  visibility: hidden;
+  display: none;
 }
 
 .content-form-number-three {
-  position: relative;
   top: 20px;
 }
 
 .inputs-create-user-three {
-  left: 58.5%;
-  position: absolute;
-  top: 45%;
+  left: 61%;
+  position: relative;
+  top: 400px;
   width: 500px;
   visibility: visible;
 }
 
 .inputs-create-user-three-false {
-  visibility: hidden;
+  display: none;
 }
 
 .content-create-user-4-modal {
   background: rgba(0, 0, 0, 0.6);
-
   position: relative;
   height: 116%;
-
   width: 600%;
 }
 .content-create-user-4-modal-false {
-  visibility: hidden;
+  display: none;
+}
+.content-header-text-create-user-2-step-four {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  position: relative;
+  left: 16%;
+  top: -255px;
+  margin-bottom: -310px;
 }
 .second-text-header-create-user-2-step-three {
   color: $Black-secondary;
@@ -414,21 +423,14 @@ input[type="number"]::-webkit-inner-spin-button {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-
-  left: 16%;
-  position: absolute;
   width: 452px;
-  top: -30%;
 }
 
 .bar-step-four {
   background: #c4c4c4;
   border-radius: 10px;
   height: 16px;
-  left: 16%;
-  position: absolute;
-  bottom: 156%;
-  width: 410px;
+  width: 100%;
 }
 
 .progress-bar-step-four {
@@ -454,15 +456,11 @@ input[type="number"]::-webkit-inner-spin-button {
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
-
-  left: 16%;
-  position: absolute;
   width: 402px;
-  top: -20%;
 }
 
 .content-form-number-four-false {
-  visibility: hidden;
+  display: none;
 }
 
 .content-form-number-four {
@@ -471,15 +469,15 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .inputs-create-user-four {
-  left: 58.5%;
-  position: absolute;
-  top: 40%;
+  left: 61%;
+  position: relative;
+  top: 360px;
   width: 500px;
   visibility: visible;
 }
 
 .inputs-create-user-four-false {
-  visibility: hidden;
+  display: none;
 }
 
 .button-create-user2-step-Three:enabled {
@@ -495,7 +493,7 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: center;
   padding: 16px 10px;
   position: absolute;
-  top: 90px;
+  top: 236px;
   width: 402px;
   &:hover {
     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
@@ -520,7 +518,7 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: center;
   padding: 16px 10px;
   position: relative;
-  top: 90px;
+  top: 236px;
   width: 402px;
 }
 .button-create-user2-step-two:enabled {
@@ -536,7 +534,7 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: center;
   padding: 16px 10px;
   position: absolute;
-  top: -40px;
+  top: 110px;
   width: 402px;
   &:hover {
     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
@@ -561,7 +559,7 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: center;
   padding: 16px 10px;
   position: relative;
-  top: -40px;
+  top: 110px;
   width: 402px;
 }
 .button-create-user2-step-four:enabled {
@@ -577,7 +575,7 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: center;
   padding: 16px 10px;
   position: absolute;
-  top: 200px;
+  top: 364px;
   width: 402px;
   &:hover {
     box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
@@ -602,17 +600,39 @@ input[type="number"]::-webkit-inner-spin-button {
   justify-content: center;
   padding: 16px 10px;
   position: relative;
-  top: 200px;
+  top: 364px;
   width: 402px;
 }
-
+@media (max-width: 1700px) {
+  .button-create-user2-step-two:disabled {
+    top: 26px;
+  }
+  .button-create-user2-step-two:enabled {
+    top: 26px;
+  }
+  .button-create-user2-step-Three:disabled {
+    top: 86px;
+  }
+  .button-create-user2-step-Three:enabled {
+    top: 86px;
+  }
+  .button-create-user2-step-four:disabled {
+    top: 196px;
+  }
+  .button-create-user2-step-four:enabled {
+    top: 196px;
+  }
+  .content-modal {
+    top: 100px;
+  }
+}
 .content-modal {
   background-color: white;
   width: 485px;
   height: 380px;
-  position: absolute;
-  top: 20%;
-  left: 35%;
+  position: relative;
+  top: 100px;
+  left: 36.5%;
   border-radius: 8px;
   z-index: 7000;
   display: flex;
@@ -632,7 +652,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .background-modal-false {
-  visibility: hidden;
+  display: none;
 }
 
 .img-modal {
