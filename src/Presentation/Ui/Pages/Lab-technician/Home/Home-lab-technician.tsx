@@ -25,7 +25,7 @@ export const HomeLabTechnician = () => {
         })
       );
   };
-  const navigate = useNavigate();
+
   console.log(filtrar);
   const handleChangeOne = (e: any) => {
     setBusqueda(e.target.value);

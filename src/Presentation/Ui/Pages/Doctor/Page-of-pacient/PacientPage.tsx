@@ -167,7 +167,7 @@ export const PacientPage = () => {
               <div className="content-modal-delete-pacient-page">
                 <div className="card-modal-delete-pacient-page">
                   <img src={Delete} />
-                  <h1> ¿Quiers eliminar los examenes? </h1>
+                  <h1> ¿Quires eliminar los examenes? </h1>
                   <p className="text-modal-delete-page-pacient">
                     Se eliminaran los examnes seleccionados y ya el paciente no
                     podrá verlos o realizarlos.

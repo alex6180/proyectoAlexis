@@ -92,36 +92,48 @@ export const HomePacient = () => {
           );
         })}
       </div>
-      <div
-        className={
-          visibleModal === true ? "background-modal" : "background-modal-false"
-        }
-      />
       {visibleModal && (
-        <div className="content-modal-home-admin">
-          <div className="content-header-modal">
-            <h1 className="text-header">Rol</h1>
-            <img
-              className="img-header"
-              src={iconBottomModal}
-              onClick={buttonActiveModal}
-            />
-          </div>
-          <div className="content-body-modal">
-            {CONSTANTS.Rol.map((rol) => {
-              return (
-                <>
-                  <input
-                    type="checkbox"
-                    value={rol}
-                    className="checkbox-text-body"
-                  />
-                  <h1 className="text-body"> {rol} </h1>
-                </>
-              );
-            })}
-            <div className="content-button-create-user-2">
-              <button className="button-modal">Aplicar</button>
+        <div className="background-modal-pacient-page">
+          <div className="content-modal-pacient-page">
+            <div className="body-modal-pacient">
+              <div className="content-header-modal-pacient-page">
+                <h1 className="text-header-modal-pacient">Tipo de examen</h1>
+                <img
+                  className="img-header-pacient-page"
+                  src={iconBottomModal}
+                  onClick={buttonActiveModal}
+                />
+              </div>
+              <div className="content-body-modal-pacient-page">
+                {CONSTANTS.TipoExamen.map((i) => {
+                  return (
+                    <>
+                      <input
+                        type="checkbox"
+                        value={i}
+                        className="checkbox-text-body-pacient"
+                      />
+                      <h1 className="tex-body-pacient-page"> {i} </h1>
+                    </>
+                  );
+                })}
+                <h1 className="text-two-header-modal-pacient">
+                  Estado del examen
+                </h1>
+                {CONSTANTS.EstadoExamen.map((i) => {
+                  return (
+                    <>
+                      <input
+                        type="checkbox"
+                        value={i}
+                        className="checkbox-text-body"
+                      />
+                      <h1 className="text-two-body-pacient-page"> {i} </h1>
+                    </>
+                  );
+                })}
+                <button className="button-modal-pacient-page">Aplicar</button>
+              </div>
             </div>
           </div>
         </div>
