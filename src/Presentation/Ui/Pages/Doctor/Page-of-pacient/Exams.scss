@@ -4,70 +4,70 @@
 .card-exam {
   cursor: pointer;
   height: 100px;
-  width: 290px;
+  background: white;
   border-radius: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-  transition: all 0.25s;
-  background: white;
-  position: relative;
-  margin-bottom: 30px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  margin-bottom: 30px;
+  transition: all 0.25s;
+  position: relative;
+  width: 290px;
 }
 .card-exam:hover {
-  transform: translateY(-2px);
   box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
 }
 .text-card-exam {
-  font-size: 20px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
   color: $Black-tertiary;
-  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
   left: 54px;
-  top: 19px;
   margin-bottom: 40px;
+  position: relative;
+  top: 19px;
 }
 
 .without-checking {
+  bottom: 10px;
+  color: #828282;
   font-family: "Verdana";
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  position: relative;
   left: 64px;
-  bottom: 10px;
   letter-spacing: 0.15px;
-  color: #828282;
+  position: relative;
 }
 .waiting-for-results {
+  bottom: 10px;
+  color: #f2994a;
   font-family: "Verdana";
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
-  position: relative;
   left: 64px;
-  bottom: 10px;
   letter-spacing: 0.15px;
-  color: #f2994a;
+  position: relative;
 }
 .to-check {
-  font-family: "Verdana";
-  position: relative;
-  left: 64px;
+  color: #2d9cdb;
   bottom: 10px;
+  font-family: "Verdana";
   font-weight: 400;
   font-size: 16px;
+  position: relative;
+  left: 64px;
   letter-spacing: 0.15px;
-  color: #2d9cdb;
 }
 .reviewed {
-  position: relative;
-  left: 64px;
   bottom: 10px;
+  color: #219653;
   font-size: 16px;
   font-family: "Verdana";
   font-weight: 400;
-  color: #219653;
+  left: 64px;
+  position: relative;
 }
