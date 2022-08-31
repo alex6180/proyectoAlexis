@@ -1,8 +1,5 @@
-import { useFormik } from "formik";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-import { useState } from "react";
 
 export const CardPacient = ({ Nombres, Apellidos }: any) => {
   const navigate = useNavigate();

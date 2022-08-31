@@ -63,24 +63,24 @@ export const HomeDoctor = () => {
         <div className="text-none-users">
           {infoUsers.length === 0 && busqueda && (
             <>
-              <div className="background-modal" >
-              <div className="background-modal-home-doctor">
-                <div className="content-body-modal-home-doctor">
-                  <img src={imgModal} style={{ width: 100, height: 80 }} />
-                  <h1 className="text-one-modal-home-doctor">Opps..</h1>
-                  <h1 className="text-two-modal-home-doctor">
-                    No hemos podio encontrar ningún paciente con los datos
-                    ingresados. Por favor, revisalos y vuelve a intentarlo
-                  </h1>
-                  <h1
-                    className="btn-close-modal-home-doctor"
-                    onClick={closeModal}
-                  >
-                    {" "}
-                    Aceptar{" "}
-                  </h1>
+              <div className="background-modal">
+                <div className="background-modal-home-doctor">
+                  <div className="content-body-modal-home-doctor">
+                    <img src={imgModal} style={{ width: 100, height: 80 }} />
+                    <h1 className="text-one-modal-home-doctor">Opps..</h1>
+                    <h1 className="text-two-modal-home-doctor">
+                      No hemos podio encontrar ningún paciente con los datos
+                      ingresados. Por favor, revisalos y vuelve a intentarlo
+                    </h1>
+                    <h1
+                      className="btn-close-modal-home-doctor"
+                      onClick={closeModal}
+                    >
+                      {" "}
+                      Aceptar{" "}
+                    </h1>
+                  </div>
                 </div>
-              </div>
               </div>
             </>
           )}

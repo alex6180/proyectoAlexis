@@ -49,7 +49,6 @@ export const HomeAdmin = () => {
       setcheckBox("false");
     }
   };
-  console.log(checkBox);
 
   return (
     <div>

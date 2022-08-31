@@ -10,7 +10,6 @@ export const CardUser = ({ Nombres, Apellidos, Rol }: any) => {
   };
 
   const { checkBox } = useContext(CheckBoxContext);
-  console.log(checkBox);
 
   return (
     <>
@@ -37,10 +36,12 @@ export const CardUser = ({ Nombres, Apellidos, Rol }: any) => {
           <input
             className="checkbox-card"
             type="checkbox"
-            checked={checkBox === "false" ? false : checkBox === "true" && true}
+            checked={checkBox === "true" ? true : false}
           />
         </div>
       </div>
     </>
   );
 };
+
+// checkBox === "false" ? false : true;

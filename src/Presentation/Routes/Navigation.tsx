@@ -10,9 +10,17 @@ export const CheckBoxContext = createContext<
 
 export const Navigation = () => {
   const [checkBox, setcheckBox] = useState("false");
+  const [checkBox1, setcheckBox1] = useState("false");
 
   return (
-    <CheckBoxContext.Provider value={{ checkBox, setcheckBox }}>
+    <CheckBoxContext.Provider
+      value={{
+        checkBox,
+        setcheckBox,
+        setcheckBox1,
+        checkBox1,
+      }}
+    >
       <BrowserRouter>
         <div className="main-layout">
           <Routes>

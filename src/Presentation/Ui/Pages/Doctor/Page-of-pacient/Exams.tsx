@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { CheckBoxContext } from "../../../../Routes/Navigation";
 import "./Exams.scss";
 export const Exams = ({ nombre, estado }: any) => {
+  const { checkBox1 } = useContext(CheckBoxContext);
+
+  const [first, setfirst] = useState("false");
+
   return (
     <>
       <div className="card-exam">
@@ -21,7 +26,12 @@ export const Exams = ({ nombre, estado }: any) => {
             {estado}{" "}
           </p>
         </div>
-        <input className="checkbox-card" type="checkbox" />
+        <input
+          className="checkbox-card"
+          type="checkbox"
+          value={first}
+          checked={checkBox1 === "false" ? false : true}
+        />
       </div>
     </>
   );
