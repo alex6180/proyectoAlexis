@@ -25,7 +25,7 @@ export const CreateUser = () => {
         </h1>
       </div>
       <div className="content-button-create-user">
-        <button className="button-login" onClick={buttonAction}>
+        <button className="button-create-user" onClick={buttonAction}>
           {" "}
           Crear usuario{" "}
         </button>

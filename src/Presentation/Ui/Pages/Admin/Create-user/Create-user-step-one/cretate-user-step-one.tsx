@@ -2,13 +2,18 @@ import { Header } from "../../../../Components/Header/Header";
 import Arrow from "../../../../../Common/assets/Vector1.png";
 import Doctor from "../../../../../Common/assets/pose_8.png";
 import Check from "../../../../../Common/assets/Vector-check.png";
+import NoVisible from "../../../../../Common/assets/NoVisiblePassword.png";
+import Visible from "../../../../../Common/assets/VisiblePassword.png";
 import "./cretate-user-step-one.scss";
-
 import React, { useState } from "react";
 import "react-datepicker/dist/react-datepicker.css";
 import { CONSTANTS } from "../../../../../Common/Constans/Constans";
 import { useNavigate } from "react-router-dom";
-import { useFormik } from "formik";
+import { FormikErrors, useFormik } from "formik";
+
+interface ValidateEmail {
+  CorreoElectronico: string;
+}
 
 export const CretateUserStepOne = () => {
   const { handleChange, values } = useFormik({
@@ -44,7 +49,10 @@ export const CretateUserStepOne = () => {
   const [disabledFormtwo, setDisabledFormtwo] = useState(true);
   const [disabledFormThree, setDisabledFormThree] = useState(true);
   const [disabledFormFour, setDisabledFormFour] = useState(true);
-
+  const [visiblePassword, setVisiblePassword] = useState(false);
+  const OnclickVisiblePassword = () => {
+    setVisiblePassword(!visiblePassword);
+  };
   const ButtonDisabledFormOne = () => {
     if (
       (values.Apellidos,
@@ -212,15 +220,15 @@ export const CretateUserStepOne = () => {
             })}
           </select>
           <input
-            type="number"
+            type="text"
             placeholder="Número de documento"
             autoComplete="none"
             className="input-create-user-2"
             name="NumeroDocumento"
             value={values.NumeroDocumento}
             onChange={handleChange}
+            maxLength={10}
           />
-
           <input
             onChange={handleChange}
             placeholder="Fecha de nacimiento"
@@ -230,7 +238,6 @@ export const CretateUserStepOne = () => {
             value={values.FechaNacimiento}
             name="FechaNacimiento"
           />
-
           <select
             placeholder="Sexo"
             value={values.Sexo}
@@ -346,37 +353,58 @@ export const CretateUserStepOne = () => {
               onChange={handleChange}
               placeholder="Correo electrónico"
               type="text"
-              className="input-calendar-create-user-2"
+              className={
+                values.CorreoElectrónico !== "" &&
+                !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
+                  values.CorreoElectrónico
+                )
+                  ? "input-calendar-create-user-2-invalid"
+                  : "input-calendar-create-user-2"
+              }
               value={values.CorreoElectrónico}
               name="CorreoElectrónico"
               autoComplete="none"
             />
+            {values.CorreoElectrónico !== "" &&
+            !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(
+              values.CorreoElectrónico
+            ) ? (
+              <span className="span-email">
+                el texto no coincide con un correo valido
+              </span>
+            ) : (
+              ""
+            )}
+
             <input
               onChange={handleChange}
               placeholder="Celular"
-              type="number"
+              type="text"
               className="input-calendar-create-user-2"
               value={values.Celular}
               name="Celular"
               autoComplete="none"
+              maxLength={10}
             />
             <input
               onChange={handleChange}
               placeholder="Teléfono fijo"
-              type="number"
+              type="text"
               className="input-calendar-create-user-2"
               value={values.TeléfonoFijo}
               name="TeléfonoFijo"
               autoComplete="none"
+              maxLength={10}
             />
             <input
               onChange={handleChange}
               placeholder="Teléfono de la oficina"
-              type="number"
+              type="text"
               className="input-calendar-create-user-2"
               value={values.TeléfonoOficina}
               name="TeléfonoOficina"
               autoComplete="none"
+              maxLength={10}
             />
           </form>
           <div className="content-button-create-user-3">
@@ -454,11 +482,12 @@ export const CretateUserStepOne = () => {
             <input
               onChange={handleChange}
               placeholder="Teléfono de contacto"
-              type="number"
+              type="text"
               autoComplete="none"
               className="input-calendar-create-user-2"
               value={values.TeléfonoContacto}
               name="TeléfonoContacto"
+              maxLength={10}
             />
           </form>
           <div className="content-button-create-user-3">
@@ -538,11 +567,29 @@ export const CretateUserStepOne = () => {
             <input
               onChange={handleChange}
               placeholder="Contraseña"
-              type="text"
+              type={visiblePassword === true ? "text" : "password"}
               className="input-calendar-create-user-2"
               value={values.Contraseña}
               name="Contraseña"
               autoComplete="none"
+            />
+            <img
+              src={NoVisible}
+              onClick={OnclickVisiblePassword}
+              className={
+                visiblePassword == true
+                  ? "no-visible-password"
+                  : "no-visible-password-false"
+              }
+            />
+            <img
+              src={Visible}
+              onClick={OnclickVisiblePassword}
+              className={
+                visiblePassword === false
+                  ? "visible-password"
+                  : "no-visible-password-false"
+              }
             />
           </form>
           <div className="content-button-create-user-3">

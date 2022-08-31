@@ -1,20 +1,16 @@
-import { useFormik } from "formik";
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { CheckBoxContext } from "../../../../../Routes/Navigation";
 import "./CardUser.scss";
-import { useState } from "react";
 
-export const CardUser = ({
-  Nombres,
-  Apellidos,
-  Rol,
-  checkBox,
-  onChange,
-}: any) => {
+export const CardUser = ({ Nombres, Apellidos, Rol }: any) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate(`/User-page/${Nombres}`);
   };
+
+  const { checkBox } = useContext(CheckBoxContext);
+  console.log(checkBox);
 
   return (
     <>
@@ -37,12 +33,13 @@ export const CardUser = ({
             {Rol}{" "}
           </p>
         </div>
-        <input
-          className="checkbox-card"
-          type="checkbox"
-          value={checkBox}
-          onChange={onChange}
-        />
+        <div className="check_box">
+          <input
+            className="checkbox-card"
+            type="checkbox"
+            checked={checkBox === "false" ? false : checkBox === "true" && true}
+          />
+        </div>
       </div>
     </>
   );

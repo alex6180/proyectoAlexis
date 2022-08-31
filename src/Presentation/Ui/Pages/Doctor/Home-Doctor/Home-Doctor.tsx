@@ -63,7 +63,7 @@ export const HomeDoctor = () => {
         <div className="text-none-users">
           {infoUsers.length === 0 && busqueda && (
             <>
-              <div className="background-modal" />
+              <div className="background-modal" >
               <div className="background-modal-home-doctor">
                 <div className="content-body-modal-home-doctor">
                   <img src={imgModal} style={{ width: 100, height: 80 }} />
@@ -80,6 +80,7 @@ export const HomeDoctor = () => {
                     Aceptar{" "}
                   </h1>
                 </div>
+              </div>
               </div>
             </>
           )}

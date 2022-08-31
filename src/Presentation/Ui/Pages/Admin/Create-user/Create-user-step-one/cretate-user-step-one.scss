@@ -105,7 +105,7 @@
 }
 
 .progress-bar {
-  animation: Aumentar 5s ease;
+  animation: Aumentar 0.4s ease;
   background: $Blue-primary;
   border-radius: 10px;
   height: 100%;
@@ -239,6 +239,22 @@ input:focus {
   padding: 0px 100px 0px 10px;
   width: 400px;
 }
+.input-calendar-create-user-2-invalid {
+  color: rgba(0, 0, 0, 0.5);
+  border: 0.1px solid red;
+  border-radius: 3.5px;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  position: relative;
+  font-size: 16px;
+  height: 45px;
+  left: 80px;
+  line-height: 24px;
+  margin-bottom: 25px;
+  padding: 0px 100px 0px 10px;
+  width: 290px;
+}
 .content-text-page-create-2 select:focus {
   border: 0.1px solid $Purple-primary;
   outline: none;
@@ -293,7 +309,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .progress-bar-step-two {
-  animation: Aumentar-step-two 5s ease;
+  animation: Aumentar-step-two 0.4s ease;
   background: $Blue-primary;
   border-radius: 10px;
   height: 100%;
@@ -355,7 +371,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .progress-bar-step-three {
-  animation: Aumentar-step-three 15s ease;
+  animation: Aumentar-step-three 0.4s ease;
   background: $Blue-primary;
   border-radius: 10px;
   height: 100%;
@@ -434,7 +450,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .progress-bar-step-four {
-  animation: Aumentar-step-four 16s ease;
+  animation: Aumentar-step-four 0.4s ease;
   background: $Blue-primary;
   border-radius: 10px;
   height: 100%;
@@ -708,4 +724,33 @@ input[type="number"]::-webkit-inner-spin-button {
   left: -9%;
   top: 51%;
   width: 74%;
+}
+
+.no-visible-password {
+  width: 55px;
+  height: 60px;
+  position: absolute;
+  top: 63.4%;
+  left: 83%;
+  cursor: pointer;
+}
+.no-visible-password-false {
+  display: none;
+}
+.visible-password {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 70%;
+  left: 85%;
+  cursor: pointer;
+}
+
+.span-email {
+  position: relative;
+  top: -20px;
+  display: flex;
+  left: 82px;
+  color: red;
+  margin-bottom: -10px;
 }

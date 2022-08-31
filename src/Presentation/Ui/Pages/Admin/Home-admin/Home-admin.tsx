@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import "./Home-admin.scss";
 import Doctor from "../../../../Common/assets/pose_1-home-admin.png";
@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom";
 import { InfoUsers } from "../../../../Common/Constans/Users";
 import { CardUser } from "./card-user/CardUser";
 import { CONSTANTS } from "../../../../Common/Constans/Constans";
-import { useFormik } from "formik";
+import { CheckBoxContext } from "../../../../Routes/Navigation";
 export const HomeAdmin = () => {
   const navigate = useNavigate();
   const buttonActiontwo = () => {
@@ -35,25 +35,21 @@ export const HomeAdmin = () => {
   const buttonActiveModal = () => {
     setVisibleModal(!visibleModal);
   };
-  console.log(filtrar);
   const handleChangeOne = (e: any) => {
     setBusqueda(e.target.value);
     filtrar(e.target.value);
   };
 
-  const [checkBox, setcheckBox] = useState("false");
-  const [checkBoxCard, setcheckBoxCard] = useState("false");
+  const { checkBox, setcheckBox } = useContext(CheckBoxContext);
 
-  console.log(checkBox, checkBoxCard);
-
-  const onBox = () => {
-    if (checkBox === "true") {
-      setcheckBoxCard("true");
-    }
+  const handleCheckBox = () => {
     if (checkBox === "false") {
-      setcheckBoxCard("false");
+      setcheckBox("true");
+    } else if (checkBox === "true") {
+      setcheckBox("false");
     }
   };
+  console.log(checkBox);
 
   return (
     <div>
@@ -78,11 +74,11 @@ export const HomeAdmin = () => {
           onChange={handleChangeOne}
           value={busqueda}
         />
-        <div className="content-checkbox" onChange={onBox}>
+        <div className="content-checkbox">
           <input
             className="input-checkbox-home-admin"
-            value={checkBox}
             type="checkbox"
+            onClick={handleCheckBox}
           />
           <h1 className="text-checkbox"> Seleccionar todo </h1>
         </div>
@@ -94,12 +90,7 @@ export const HomeAdmin = () => {
         {infoUsers.map(({ Nombres, Apellidos, Rol }) => {
           return (
             <div>
-              <CardUser
-                Nombres={Nombres}
-                Apellidos={Apellidos}
-                Rol={Rol}
-                checBox={checkBoxCard}
-              />
+              <CardUser Nombres={Nombres} Apellidos={Apellidos} Rol={Rol} />
             </div>
           );
         })}

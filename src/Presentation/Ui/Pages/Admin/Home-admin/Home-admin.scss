@@ -152,16 +152,16 @@
   display: grid;
   column-gap: 80px;
   grid-template-columns: repeat(3, 310px);
-  top: 420px;
+  top: 360px;
   left: 20%;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .floating-button {
   position: absolute;
   cursor: pointer;
-  width: 90px;
-  height: 90px;
+  width: 60px;
+  height: 60px;
   background-color: #2d89ff;
   top: 650px;
   left: 92%;
@@ -177,8 +177,8 @@
 }
 
 .size-icon-bottom {
-  width: 56px;
-  height: 43px;
+  width: 36px;
+  height: 30px;
 }
 
 .content-modal-home-admin {
