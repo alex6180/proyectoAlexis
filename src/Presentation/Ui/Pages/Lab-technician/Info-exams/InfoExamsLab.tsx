@@ -162,7 +162,7 @@ export const InfoExamsLab = () => {
                   <input
                     className="file-upload-input"
                     type="file"
-                    accept="image/*"
+                    accept="image,pdf"
                     multiple
                     onChange={(e) => {
                       console.log(e.target.files);

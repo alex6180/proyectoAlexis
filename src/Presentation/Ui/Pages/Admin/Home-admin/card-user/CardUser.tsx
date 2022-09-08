@@ -9,7 +9,7 @@ export const CardUser = ({ Nombres, Apellidos, Rol }: any) => {
     navigate(`/User-page/${Nombres}`);
   };
 
-  const { checkBox } = useContext(CheckBoxContext);
+  const { checkBoxAdmin } = useContext(CheckBoxContext);
 
   return (
     <>
@@ -36,7 +36,9 @@ export const CardUser = ({ Nombres, Apellidos, Rol }: any) => {
           <input
             className="checkbox-card"
             type="checkbox"
-            checked={checkBox === "true" ? true : false}
+            checked={checkBoxAdmin}
+            id="Nombres"
+            value="Nombres"
           />
         </div>
       </div>

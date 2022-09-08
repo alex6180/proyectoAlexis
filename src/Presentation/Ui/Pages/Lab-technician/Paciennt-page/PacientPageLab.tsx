@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useParams, useNavigate } from "react-router-dom";
 import { Pacients } from "../../../../Common/Constans/Pacients";
@@ -13,6 +13,7 @@ import iconBottomModal from "../../../../Common/assets/Vector-close-modal.png";
 import Delete from "../../../../Common/assets/Vector-icon-delete.png";
 import { Exams } from "./Exams";
 import { CONSTANTS } from "../../../../Common/Constans/Constans";
+import { CheckBoxContext } from "../../../../Routes/Navigation";
 export const PacientPageLab = () => {
   const { id } = useParams();
   const getPacientById = (id: any) => {
@@ -31,6 +32,15 @@ export const PacientPageLab = () => {
   };
   const buttonActiveModalDelete = () => {
     setVisibleModalDelete(!visibleModalDelete);
+  };
+  const { checkBoxLab, setcheckBoxLab } = useContext(CheckBoxContext);
+
+  const handleCheckBox = () => {
+    if (checkBoxLab === false) {
+      setcheckBoxLab(true);
+    } else if (checkBoxLab === true) {
+      setcheckBoxLab(false);
+    }
   };
   return (
     <div>
@@ -130,7 +140,8 @@ export const PacientPageLab = () => {
               <div className="content-checkbox-pacient">
                 <input
                   className="input-checkbox-pacient-exams"
-                  // value={checkBox}
+                  onClick={handleCheckBox}
+                  checked={checkBoxLab}
                   type="checkbox"
                 />
                 <h1 className="text-checkbox"> Seleccionar todo </h1>

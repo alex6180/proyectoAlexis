@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CheckBoxContext } from "../../../../Routes/Navigation";
 export const Exams = ({ nombre, estado }: any) => {
+  const { checkBoxLab } = useContext(CheckBoxContext);
   return (
     <>
       <div className="card-exam">
@@ -20,7 +22,11 @@ export const Exams = ({ nombre, estado }: any) => {
             {estado}{" "}
           </p>
         </div>
-        <input className="checkbox-card" type="checkbox" />
+        <input
+          className="checkbox-card"
+          type="checkbox"
+          checked={checkBoxLab}
+        />
       </div>
     </>
   );

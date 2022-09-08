@@ -43,13 +43,16 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
+  position: relative;
+  top: 40px;
+  left: 59%;
 }
 
 .content-text-body {
   font-family: "Montserrat";
-  left: 800px;
+  left: 60%;
   position: absolute;
-  top: 250px;
+  top: 32%;
   width: 600px;
 }
 .content-text-body-with-users {
@@ -253,5 +256,9 @@
   .background-modal-home-doctor {
     left: 34%;
     top: 18%;
+  }
+  .text-none-users {
+    left: 10%;
+    top: -10%;
   }
 }

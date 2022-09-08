@@ -40,13 +40,13 @@ export const HomeAdmin = () => {
     filtrar(e.target.value);
   };
 
-  const { checkBox, setcheckBox } = useContext(CheckBoxContext);
+  const { checkBoxAdmin, setcheckBoxAdmin } = useContext(CheckBoxContext);
 
   const handleCheckBox = () => {
-    if (checkBox === "false") {
-      setcheckBox("true");
-    } else if (checkBox === "true") {
-      setcheckBox("false");
+    if (checkBoxAdmin === false) {
+      setcheckBoxAdmin(true);
+    } else if (checkBoxAdmin === true) {
+      setcheckBoxAdmin(false);
     }
   };
 
@@ -78,6 +78,7 @@ export const HomeAdmin = () => {
             className="input-checkbox-home-admin"
             type="checkbox"
             onClick={handleCheckBox}
+            checked={checkBoxAdmin}
           />
           <h1 className="text-checkbox"> Seleccionar todo </h1>
         </div>

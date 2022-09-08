@@ -7,6 +7,7 @@ import { CONSTANTS } from "../../../../Common/Constans/Constans";
 import { Pacients } from "../../../../Common/Constans/Pacients";
 import { CardPacient } from "./CardPacient/CardPacient";
 import { useNavigate } from "react-router-dom";
+import "./HomeLab.scss";
 export const HomeLabTechnician = () => {
   const [withUsers, setwithUsers] = useState(true);
   const [withUser, setwithUser] = useState(false);
@@ -60,7 +61,7 @@ export const HomeLabTechnician = () => {
           {infoUsers.length === 0 && busqueda && (
             <>
               <div className="background-modal" />
-              <div className="background-modal-home-doctor">
+              <div className="background-modal-home-lab">
                 <div className="content-body-modal-home-doctor">
                   <img src={imgModal} style={{ width: 100, height: 80 }} />
                   <h1 className="text-one-modal-home-doctor">Opps..</h1>

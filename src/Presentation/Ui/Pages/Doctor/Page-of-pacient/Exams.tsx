@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { CheckBoxContext } from "../../../../Routes/Navigation";
 import "./Exams.scss";
 export const Exams = ({ nombre, estado }: any) => {
-  const { checkBox1 } = useContext(CheckBoxContext);
+  const { checkBoxDoctor } = useContext(CheckBoxContext);
 
   const [first, setfirst] = useState("false");
 
@@ -30,7 +30,7 @@ export const Exams = ({ nombre, estado }: any) => {
           className="checkbox-card"
           type="checkbox"
           value={first}
-          checked={checkBox1 === "false" ? false : true}
+          checked={checkBoxDoctor}
         />
       </div>
     </>

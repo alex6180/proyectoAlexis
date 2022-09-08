@@ -36,13 +36,13 @@ export const PacientPage = () => {
   const buttonActiveModalDelete = () => {
     setVisibleModalDelete(!visibleModalDelete);
   };
-  const { checkBox1, setcheckBox1 } = useContext(CheckBoxContext);
+  const { checkBoxDoctor, setcheckBoxDoctor } = useContext(CheckBoxContext);
 
   const handleCheckBox = () => {
-    if (checkBox1 === "false") {
-      setcheckBox1("true");
-    } else if (checkBox1 === "true") {
-      setcheckBox1("false");
+    if (checkBoxDoctor === false) {
+      setcheckBoxDoctor(true);
+    } else if (checkBoxDoctor === true) {
+      setcheckBoxDoctor(false);
     }
   };
 
@@ -155,6 +155,7 @@ export const PacientPage = () => {
                   className="input-checkbox-pacient-exams"
                   onClick={handleCheckBox}
                   type="checkbox"
+                  checked={checkBoxDoctor}
                 />
                 <h1 className="text-checkbox"> Seleccionar todo </h1>
               </div>
