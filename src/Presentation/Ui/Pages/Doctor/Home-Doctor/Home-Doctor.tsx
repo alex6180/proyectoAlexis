@@ -23,6 +23,9 @@ export const HomeDoctor = () => {
           if (i.NumeroDocumento.toString().includes(busqueda.toLowerCase())) {
             return i;
           }
+          if (i.TipoDocumento.toString().includes(busqueda.toLowerCase())) {
+            return i;
+          }
         })
       );
   };
@@ -140,7 +143,12 @@ export const HomeDoctor = () => {
                 : "content-buttons-body-home-page-true-with-user"
             }
           >
-            <button className="btn-search-pacient" onClick={withuser}>
+            <button
+              className={
+                withUser === true ? "btn-add-exam-false" : "btn-search-pacient"
+              }
+              onClick={withuser}
+            >
               Buscar Paciente
             </button>
             <button

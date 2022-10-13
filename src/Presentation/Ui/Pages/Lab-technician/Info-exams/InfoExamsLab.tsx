@@ -40,6 +40,15 @@ export const InfoExamsLab = () => {
   const navpageprev = () => {
     navigate("/Home-Lab-Technician");
   };
+  const [file, setFile] = useState();
+  const uploadFiles = (e: any) => {
+    const fileReader = new FileReader();
+    fileReader.readAsDataURL(e.target.files[0]);
+    fileReader.onload = (e) => {
+      e.preventDefault();
+    };
+  };
+
   return (
     <div>
       <Helmet bodyAttributes={{ style: "background :  whitesmoke;" }} />
@@ -162,13 +171,13 @@ export const InfoExamsLab = () => {
                   <input
                     className="file-upload-input"
                     type="file"
-                    accept="image,pdf"
+                    accept="img/*,.pdf"
                     multiple
                     onChange={(e) => {
-                      console.log(e.target.files);
+                      uploadFiles(e.target.files);
                     }}
                   />
-                  <div className="text-information">
+                  <div className={"text-information"}>
                     <img src={imgInputFiles} />
                     <h1>Arrastra y suelta aquí</h1>
                     <h3> ó </h3>
