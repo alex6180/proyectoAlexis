@@ -1,0 +1,255 @@
+@import "../../Styles/_common.scss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@100;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
+.content-img {
+  width: 50%;
+}
+
+.size-doctor {
+  height: 97%;
+  left: 1.6%;
+  position: absolute;
+  width: 726px;
+  top: 3%;
+}
+
+.content-home {
+  display: flex;
+  flex-direction: row;
+  height: 90vh;
+  width: 100%;
+}
+
+.content-login {
+  display: flex;
+  flex-direction: column;
+  left: 60%;
+  position: absolute;
+  top: 18%;
+}
+.content-login-title {
+  font-family: "Verdana";
+  line-height: 32px;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 400;
+  left: 100px;
+  position: absolute;
+  top: 103px;
+}
+
+.content-inputs {
+  display: flex;
+  flex-direction: column;
+  left: 100px;
+  position: absolute;
+  top: 350px;
+  width: 300px;
+
+  &:focus {
+    border-bottom: 0.1px solid $Blue-primary;
+    outline: none;
+  }
+}
+.content-button-login {
+  position: relative;
+  top: -20px;
+}
+
+.subtitle {
+  color: $Black-secondary;
+  font-size: 20px;
+  font-weight: 400;
+  height: 96px;
+  position: absolute;
+  top: 60px;
+  width: 452px;
+}
+
+.title {
+  color: $Black-primary;
+  font-size: 30px;
+  font-weight: 700;
+  height: 24px;
+  width: 190px;
+}
+
+.input-name {
+  border: 0.1px solid $Black-primary;
+  border-radius: 3.5px;
+  font-size: 16px;
+  flex-direction: row;
+  height: 44px;
+  padding: 2px 2.5rem;
+  position: relative;
+  top: -23px;
+  width: 320px;
+}
+
+.input-name:focus {
+  border: 0.1px solid $Blue-primary;
+  outline: none;
+}
+
+.input-name:focus + label {
+  color: $Blue-primary;
+  font-size: 12px;
+  font-weight: 400;
+  left: 14px;
+  transform: translateY(-25px);
+  transition: 0.5s;
+}
+.input-name:not(:placeholder-shown) + .placeholder-user {
+  font-size: 12px;
+  left: 14px;
+  transform: translateY(-25px);
+}
+.input-password {
+  border: 0.1px solid $Black-primary;
+  border-radius: 3.5px;
+  font-size: 16px;
+  flex-direction: row;
+  height: 44px;
+  padding: 2px 2.5rem;
+  position: relative;
+  text-align: left;
+  top: -3px;
+  width: 320px;
+}
+.input-password:focus + label {
+  color: $Blue-primary;
+  font-size: 12px;
+  font-weight: 400;
+  left: 14px;
+  transform: translateY(-25px);
+}
+
+.input-password:not(:placeholder-shown) + .placeholder-password {
+  font-size: 12px;
+  left: 14px;
+  transform: translateY(-25px);
+}
+
+.input-password:focus {
+  border: 0.1px solid $Blue-primary;
+  outline: none;
+}
+
+.text-login {
+  color: #4151b9;
+  cursor: pointer;
+  font-family: "Verdana";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  height: 24px;
+  line-height: 24px;
+  left: 160.37px;
+  position: absolute;
+  text-align: center;
+  top: 544px;
+  width: 287.04px;
+}
+
+.img-input-password {
+  bottom: 20px;
+  height: 18px;
+  left: 16px;
+  position: absolute;
+  width: 14px;
+}
+
+.img-input-user {
+  bottom: 89px;
+  left: 14px;
+  position: absolute;
+}
+
+label {
+  background: white;
+  padding: 0 0.5rem;
+  position: absolute;
+}
+
+.placeholder-password {
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-family: "Verdana";
+  font-size: 15px;
+  font-weight: 400;
+  left: 40px;
+  transition: all 0.5s;
+  top: 61px;
+}
+
+.placeholder-user {
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-family: "Verdana";
+  font-size: 15px;
+  font-weight: 400;
+  left: 40px;
+  transition: all 0.5s;
+  top: -8px;
+}
+.button-login:enabled {
+  align-items: center;
+  background: $Blue-primary;
+  border: none;
+  border-radius: 8px;
+  color: $Background-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  height: 44px;
+  justify-content: center;
+  left: 100px;
+  padding: 16px 10px;
+  position: absolute;
+  top: 510px;
+  width: 402px;
+  &:hover {
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.button-login:disabled {
+  align-items: center;
+  background: #75b2ff;
+  border: none;
+  border-radius: 8px;
+  color: $Background-white;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  height: 44px;
+  justify-content: center;
+  left: 100px;
+  padding: 16px 10px;
+  position: absolute;
+  top: 510px;
+  width: 402px;
+}
+
+@media (max-width: 1700px) {
+  .size-doctor {
+    left: 1%;
+    width: 626px;
+  }
+  .content-login {
+    left: 58%;
+    top: 14%;
+  }
+  .text-login {
+    top: 520px;
+  }
+  .content-button-login {
+    top: -40px;
+  }
+}

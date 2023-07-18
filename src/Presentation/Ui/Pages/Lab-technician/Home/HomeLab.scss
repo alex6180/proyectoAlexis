@@ -1,0 +1,18 @@
+.background-modal-home-lab {
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  height: 452px;
+  justify-content: center;
+  left: -360px;
+  position: absolute;
+  top: 24%;
+  width: 485px;
+  z-index: 3000;
+}
+@media (max-width: 1700px) {
+  .background-modal-home-lab {
+    left: 320px;
+    top: 32%;
+  }
+}

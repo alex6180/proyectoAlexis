@@ -1,0 +1,389 @@
+@import "../../../Styles/_common.scss";
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,700;1,600&family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@300;600;800&display=swap");
+.content-user-page {
+  overflow-x: none;
+}
+.Button-user-page {
+  color: $Blue-primary;
+  cursor: pointer;
+  left: 14%;
+  position: absolute;
+  top: 17%;
+  z-index: 4;
+}
+.size-arrow-user-page {
+  left: -60%;
+  height: 23.67px;
+  position: absolute;
+  top: 28%;
+  width: 23.67px;
+}
+.text-button-user-page {
+  line-height: 32px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.background-header-user-page {
+  background-color: #ffffff;
+  width: 100%;
+  height: 450px;
+  position: absolute;
+  left: 0;
+  top: 82px;
+  border-radius: 0 0 80px 0;
+  box-shadow: 3px 3px 0 0px rgba(0, 0, 0, 0.1);
+}
+.content-circles-user-page {
+  z-index: 1;
+  height: 300px;
+  width: 100px;
+}
+.circle-user-page {
+  border-radius: 1000px;
+  border-bottom-right-radius: 142px;
+  border-bottom-left-radius: 160px;
+  border-top-right-radius: 20px;
+  width: 380px;
+  height: 380px;
+  background-color: $Blue-primary;
+  position: absolute;
+  left: 80.3%;
+  top: 70px;
+}
+.circle-second-user-page {
+  background-color: $Blue-primary;
+  box-shadow: 0px 0px 0px 2px rgba(0.1, 0.1, 0.1, 0.1);
+  border-radius: 1000px;
+  border-bottom-right-radius: 142px;
+  border-bottom-left-radius: 160px;
+  border-top-right-radius: 20px;
+  height: 308px;
+  z-index: 1;
+  position: absolute;
+  left: 84.2%;
+  top: 140px;
+  width: 305px;
+}
+.size-doctor-user-page {
+  width: 800px;
+  height: 450px;
+  position: absolute;
+  left: 58%;
+  z-index: 2;
+  top: 0.4%;
+}
+.text-header-user-page {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 76px;
+  color: $Black-tertiary;
+  position: absolute;
+  bottom: 40px;
+}
+.text-2-subtitle-admin {
+  position: absolute;
+  top: 80px;
+  font-size: 36px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #27ae60;
+}
+.text-2-subtitle-doctor {
+  position: absolute;
+  top: 80px;
+  font-size: 36px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #2d9cdb;
+}
+.text-2-subtitle-Patinete {
+  position: absolute;
+  top: 80px;
+  font-size: 36px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #ef5da8;
+}
+.text-2-subtitle-Laboratorista {
+  position: absolute;
+  top: 80px;
+  font-size: 36px;
+  font-family: "Verdana";
+  font-weight: 400;
+  color: #f2994a;
+}
+.content-text-header-user-page {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 700px;
+  height: 200px;
+}
+.content-dates-personals {
+  display: flex;
+  margin-bottom: 60px;
+}
+.background-info-of-dates {
+  flex-direction: column;
+  gap: 16px;
+  width: 1760px;
+  padding: 15px;
+  height: 314px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.background-info-of-dates-personals {
+  flex-direction: column;
+  gap: 16px;
+  width: 630px;
+  padding: 15px;
+  height: 354px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+.content-info-user-page {
+  width: 100%;
+  position: absolute;
+  display: grid;
+  column-gap: 80px;
+  grid-template-columns: repeat(2, 380px);
+  top: 68%;
+  left: 0;
+  justify-content: center;
+}
+
+.text-info {
+  position: absolute;
+  color: rgba(63, 63, 63, 0.4);
+  top: -48px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+.text-info-2 {
+  position: absolute;
+  color: rgba(63, 63, 63, 0.4);
+  top: 46%;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.text-info-user {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+  color: $Black-secondary;
+}
+
+span {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #333333;
+}
+
+.checkbox-btn {
+  visibility: hidden;
+}
+
+.content-btn-floating {
+  position: fixed;
+  left: 88%;
+  top: 498px;
+  z-index: 3000;
+  flex-direction: column;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.content-btn-floating-true-modal {
+  position: fixed;
+  left: 88%;
+  top: 498px;
+  z-index: 1;
+  flex-direction: column;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.content-button-floating {
+  display: flex;
+  background: $Blue-primary;
+  width: 70px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  transition: all 500ms ease;
+  position: relative;
+}
+
+.content-button-floating:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+}
+
+.content-icon-btn {
+  cursor: pointer;
+  background: transparent;
+  transition: all 500ms ease;
+}
+
+.icon-and-text-delete {
+  display: flex;
+  flex-direction: row-reverse;
+  color: #fff;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  align-items: center;
+}
+// .content-button-acctions {
+//   position: absolute;
+//   left: 30px;
+// }
+.icon-and-text-edit {
+  color: #fff;
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  align-items: center;
+}
+.icon-delete {
+  cursor: pointer;
+  margin-left: 10px;
+  background: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  transition: all 500ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon-edit {
+  cursor: pointer;
+  margin-left: 10px;
+  background: #fff;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+  transition: all 500ms ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-button-acctions div {
+  margin-bottom: -8px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.content-button-acctions-true div {
+  margin-bottom: 8px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.content-icon-btn-true {
+  cursor: pointer;
+  background: transparent;
+  transform: rotate(137deg);
+  transition: all 500ms ease;
+}
+
+.content-modal-user-page {
+  position: fixed;
+  width: 639px;
+  height: 468px;
+  left: 35%;
+  z-index: 4000;
+  background: #ffffff;
+  border-radius: 8px;
+  top: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-modal-user-page {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  color: $Black-primary;
+}
+
+.subtitle-modal-user-page {
+  font-family: "Verdana";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: $Black-secondary;
+  width: 481px;
+  height: 64px;
+  text-align: center;
+}
+.content-btn-text {
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.text-btn-one {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #a22027;
+  margin-bottom: 2px;
+}
+.text-btn-two {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: $Blue-primary;
+  cursor: pointer;
+}
+
+@media (max-width: 1700px) {
+  .circle-user-page {
+    left: 73.6%;
+  }
+  .circle-second-user-page {
+    left: 78.7%;
+  }
+  .size-doctor-user-page {
+    left: 42%;
+  }
+  .content-info-user-page {
+    top: 84%;
+  }
+  .content-modal-user-page {
+    left: 28%;
+  }
+}
